@@ -1,0 +1,6 @@
+work/
+*.part
+*.ytdl
+__pycache__/
+.DS_Store
+.vercel
