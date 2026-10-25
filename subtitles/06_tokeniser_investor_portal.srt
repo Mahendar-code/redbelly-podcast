@@ -1,0 +1,170 @@
+1
+00:00:00,000 --> 00:00:01,920
+And from a user experience,
+
+2
+00:00:01,920 --> 00:00:03,360
+it's very much that
+traditional web
+
+3
+00:00:03,360 --> 00:00:04,000
+experience.
+
+4
+00:00:04,000 --> 00:00:05,300
+You get invited to view
+
+5
+00:00:05,300 --> 00:00:07,020
+your holdings in a
+particular company
+
+6
+00:00:07,020 --> 00:00:07,680
+or fund.
+
+7
+00:00:07,680 --> 00:00:09,000
+You register an account,
+
+8
+00:00:09,000 --> 00:00:10,400
+you log in and have
+
+9
+00:00:10,400 --> 00:00:11,820
+a dashboard where
+you can see
+
+10
+00:00:11,820 --> 00:00:13,000
+your holdings, see the value
+
+11
+00:00:13,000 --> 00:00:13,680
+of those holdings.
+
+12
+00:00:13,680 --> 00:00:15,220
+You can download
+statements,
+
+13
+00:00:15,220 --> 00:00:16,600
+whether they're
+holding statements,
+
+14
+00:00:16,600 --> 00:00:18,500
+share certificates,
+unit certificates,
+
+15
+00:00:18,500 --> 00:00:20,380
+receive communications
+in the form
+
+16
+00:00:20,380 --> 00:00:21,880
+of announcements
+or communications
+
+17
+00:00:21,880 --> 00:00:23,500
+from the company or funds.
+
+18
+00:00:23,500 --> 00:00:25,060
+And what's nice about that,
+
+19
+00:00:25,060 --> 00:00:26,520
+and the user feedback
+we've gotten
+
+20
+00:00:26,520 --> 00:00:27,780
+from our existing clients,
+
+21
+00:00:27,780 --> 00:00:29,100
+has been that it's modern,
+
+22
+00:00:29,100 --> 00:00:30,500
+it's fast, and most
+importantly,
+
+23
+00:00:30,500 --> 00:00:33,000
+it looks and makes the issuer
+
+24
+00:00:33,000 --> 00:00:34,640
+look serious, and shows
+
+25
+00:00:34,640 --> 00:00:36,640
+that they care
+about the investor
+
+26
+00:00:36,640 --> 00:00:37,100
+experience.
+
+27
+00:00:37,100 --> 00:00:38,700
+And that's something
+that really matters
+
+28
+00:00:38,700 --> 00:00:39,780
+to us, because we know
+
+29
+00:00:39,780 --> 00:00:40,900
+that at the end
+
+30
+00:00:40,900 --> 00:00:41,260
+of the day,
+
+31
+00:00:41,260 --> 00:00:42,540
+even though it's the trustees
+
+32
+00:00:42,540 --> 00:00:44,080
+or the companies that pay
+
+33
+00:00:44,080 --> 00:00:47,120
+our fees and subscribe or use
+
+34
+00:00:47,120 --> 00:00:48,220
+the product,
+
+35
+00:00:48,300 --> 00:00:49,660
+they're doing it
+for the benefit
+
+36
+00:00:49,660 --> 00:00:50,620
+of their investors.
+
+37
+00:00:50,620 --> 00:00:51,840
+And we know our
+real customers
+
+38
+00:00:51,840 --> 00:00:52,800
+are those investors,
+
+39
+00:00:52,800 --> 00:00:54,330
+and getting a really
+good experience.

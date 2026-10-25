@@ -1,0 +1,119 @@
+
+=== 01_aussie_dollars_onshore  2623.14 to 2669.08
+  small.en   agreement 89.7%, 9 differences
+      insert   text=''                                            small.en='why'
+      insert   text=''                                            small.en='of'
+      insert   text=''                                            small.en='there is that'
+      insert   text=''                                            small.en='that'
+      replace  text='and'                                         small.en='an'
+      delete   text='a'                                           small.en=''
+      replace  text='onshore.'                                    small.en='on shore.'
+      replace  text='onshore.'                                    small.en='on shore.'
+      replace  text='Australian-built and Australian-operated'    small.en='Australian now Australian built an Australian operated'
+  medium.en  agreement 89.0%, 10 differences
+      delete   text='Then'                                        medium.en=''
+      delete   text='you know,'                                   medium.en=''
+      insert   text=''                                            medium.en='that'
+      replace  text='US'                                          medium.en='U .S.'
+      replace  text='and'                                         medium.en='an'
+      replace  text='a US'                                        medium.en='U .S.'
+      replace  text='onshore.'                                    medium.en='on shore.'
+      replace  text='onshore.'                                    medium.en='on shore.'
+      replace  text='Australian-built'                            medium.en='Australian, Australian built'
+      replace  text='Australian-operated'                         medium.en='Australian operated'
+  large-v3   agreement 93.6%, 6 differences
+      delete   text='Then'                                        large-v3=''
+      replace  text='that'                                        large-v3='the'
+      replace  text='onshore.'                                    large-v3='on shore.'
+      replace  text='onshore.'                                    large-v3='on shore.'
+      replace  text='Australian-built'                            large-v3='Australian built'
+      replace  text='Australian-operated'                         large-v3='Australian operated'
+
+=== 02_regulated_proof_of_stake  2005.30 to 2053.73
+  small.en   agreement 97.0%, 3 differences
+      replace  text='incentivise'                                 small.en='incentivize'
+      replace  text='tech-savvy'                                  small.en='tech -savvy'
+      replace  text='masses.'                                     small.en='mass. Yeah.'
+  medium.en  agreement 95.1%, 8 differences
+      insert   text=''                                            medium.en='stake.'
+      delete   text='you know,'                                   medium.en=''
+      insert   text=''                                            medium.en='One'
+      replace  text='incentivise'                                 medium.en='incentivize'
+      delete   text='right?'                                      medium.en=''
+      replace  text='tech-savvy'                                  medium.en='tech -savvy'
+      delete   text='You know,'                                   medium.en=''
+      insert   text=''                                            medium.en='Yeah,'
+  large-v3   agreement 97.4%, 3 differences
+      replace  text='incentivise'                                 large-v3='incentivize'
+      replace  text='tech-savvy'                                  large-v3='tech -savvy'
+      replace  text='rationals'                                   large-v3='nationals'
+
+=== 03_tokenised_bonds_next  1409.45 to 1468.15
+  small.en   agreement 89.7%, 12 differences
+      replace  text='the'                                         small.en='a'
+      replace  text='talked'                                      small.en='talk'
+      insert   text=''                                            small.en='Um, was, was the,'
+      replace  text='Acacia,'                                     small.en='Arkesha,'
+      insert   text=''                                            small.en='Yeah. Yeah. Uh,'
+      insert   text=''                                            small.en='a, a, a'
+      insert   text=''                                            small.en='um, um, where we think'
+      insert   text=''                                            small.en='Uh,'
+      replace  text='Acacia,'                                     small.en='Arkesha,'
+      replace  text='rank'                                        small.en='ranks'
+      insert   text=''                                            small.en='Plus'
+      insert   text=''                                            small.en='Fantastic.'
+  medium.en  agreement 93.1%, 7 differences
+      replace  text='the'                                         medium.en='a'
+      replace  text='talked about. So,'                           medium.en='took out of it was'
+      insert   text=''                                            medium.en='a'
+      replace  text='cab'                                         medium.en='cap'
+      replace  text='rank'                                        medium.en='ranks'
+      insert   text=''                                            medium.en='Plus'
+      insert   text=''                                            medium.en='you know,'
+  large-v3   agreement 96.1%, 7 differences
+      delete   text='Oh,'                                         large-v3=''
+      replace  text='So,'                                         large-v3='was'
+      insert   text=''                                            large-v3='No,'
+      insert   text=''                                            large-v3='Yeah, yeah.'
+      replace  text='cab'                                         large-v3='cap'
+      insert   text=''                                            large-v3='Plus'
+      insert   text=''                                            large-v3='Fantastic.'
+
+=== 04_registry_to_tokeniser  191.68 to 250.07
+  small.en   agreement 98.4%, 3 differences
+      insert   text=''                                            small.en='registry.'
+      replace  text='regulatory'                                  small.en='regularly'
+      replace  text='Liquidise,'                                  small.en='liquidize our'
+  medium.en  agreement 99.0%, 2 differences
+      replace  text='regulatory'                                  medium.en='regularly'
+      replace  text='Liquidise,'                                  medium.en='LiquidEyes,'
+  large-v3   agreement 97.7%, 5 differences
+      replace  text='Liquidise'                                   large-v3='Liquidize'
+      insert   text=''                                            large-v3='the'
+      insert   text=''                                            large-v3='uh'
+      replace  text='Liquidise,'                                  large-v3='uh liquidize or'
+      insert   text=''                                            large-v3='of'
+
+=== 05_acacia_fund_processes  1059.00 to 1118.85
+  small.en   agreement 98.7%, 3 differences
+      insert   text=''                                            small.en='Yes,'
+      replace  text='transactions.'                               small.en='transaction.'
+      insert   text=''                                            small.en='you'
+  medium.en  agreement 99.4%, 2 differences
+      insert   text=''                                            medium.en='Yes.'
+      insert   text=''                                            medium.en='Amazing.'
+  large-v3   agreement 99.7%, 1 differences
+      delete   text='So'                                          large-v3=''
+
+=== 06_tokeniser_investor_portal  1393.72 to 1448.05
+  small.en   agreement 98.6%, 4 differences
+      delete   text='and'                                         small.en=''
+      delete   text='and'                                         small.en=''
+      insert   text=''                                            small.en="it's"
+      replace  text='getting'                                     small.en='get'
+  medium.en  agreement 100.0%, 0 differences
+  large-v3   agreement 98.6%, 4 differences
+      delete   text='And'                                         large-v3=''
+      replace  text='funds.'                                      large-v3='fund.'
+      insert   text=''                                            large-v3="it's"
+      delete   text='really'                                      large-v3=''

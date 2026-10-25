@@ -1,0 +1,150 @@
+1
+00:00:00,000 --> 00:00:01,380
+So Tokeniser had
+the privilege
+
+2
+00:00:01,380 --> 00:00:03,260
+of also being
+involved in Project
+
+3
+00:00:03,260 --> 00:00:03,860
+Acacia.
+
+4
+00:00:03,860 --> 00:00:06,620
+We had the benefit
+of working
+
+5
+00:00:06,620 --> 00:00:08,020
+with both the trustee,
+
+6
+00:00:08,020 --> 00:00:10,040
+TAF Capital, who were
+fantastic partners
+
+7
+00:00:10,040 --> 00:00:12,460
+in letting us
+essentially use one
+
+8
+00:00:12,460 --> 00:00:13,480
+of their funds as a guinea
+
+9
+00:00:13,480 --> 00:00:14,820
+pig for the purpose
+of Project
+
+10
+00:00:14,820 --> 00:00:16,700
+Acacia, and Macropod,
+
+11
+00:00:16,700 --> 00:00:19,980
+who supplied and
+provided the AUD
+
+12
+00:00:19,980 --> 00:00:23,220
+stablecoin, AUDM,
+infrastructure for which
+
+13
+00:00:23,220 --> 00:00:25,100
+we could settle against
+any transactions.
+
+14
+00:00:25,100 --> 00:00:26,820
+So one of the cool things
+
+15
+00:00:26,820 --> 00:00:28,440
+that Tokeniser did
+was essentially,
+
+16
+00:00:28,440 --> 00:00:29,740
+as rightly pointed out,
+
+17
+00:00:29,740 --> 00:00:31,260
+tackle some of
+those processes
+
+18
+00:00:31,260 --> 00:00:33,960
+and payments in
+a fully tokenised
+
+19
+00:00:33,960 --> 00:00:34,360
+fashion.
+
+20
+00:00:34,360 --> 00:00:35,780
+And the goal was
+to demonstrate
+
+21
+00:00:35,780 --> 00:00:37,320
+just how much quicker,
+
+22
+00:00:37,320 --> 00:00:39,880
+safer and more transparent
+those processes
+
+23
+00:00:39,880 --> 00:00:42,340
+would be in a
+tokenised fashion
+
+24
+00:00:42,340 --> 00:00:44,020
+versus a traditional style.
+
+25
+00:00:44,020 --> 00:00:45,400
+So to give an example,
+
+26
+00:00:45,400 --> 00:00:48,120
+we tried to essentially
+conduct three
+
+27
+00:00:48,120 --> 00:00:51,000
+normal, common
+processes that exist
+
+28
+00:00:51,000 --> 00:00:51,900
+in any fund.
+
+29
+00:00:51,900 --> 00:00:53,440
+Those were the
+subscriptions:
+
+30
+00:00:53,440 --> 00:00:54,820
+how does an investor acquire
+
+31
+00:00:54,820 --> 00:00:55,780
+the units?
+
+32
+00:00:55,780 --> 00:00:57,360
+They were the
+
+33
+00:00:57,360 --> 00:00:59,850
+distributions and
+the redemptions.

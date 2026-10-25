@@ -1,0 +1,123 @@
+1
+00:00:00,160 --> 00:00:01,040
+So it looks like,
+
+2
+00:00:01,040 --> 00:00:02,320
+you know, blockchain
+has moved
+
+3
+00:00:02,320 --> 00:00:04,540
+and matured from
+proof of work
+
+4
+00:00:04,540 --> 00:00:06,680
+that was extremely
+energy greedy
+
+5
+00:00:06,680 --> 00:00:08,340
+to this proof of
+stake strategy
+
+6
+00:00:08,340 --> 00:00:09,860
+that is better.
+
+7
+00:00:09,860 --> 00:00:11,100
+But still, we can see hacks
+
+8
+00:00:11,100 --> 00:00:12,460
+happening all the time.
+
+9
+00:00:12,460 --> 00:00:14,220
+And now we have
+this regulated
+
+10
+00:00:14,220 --> 00:00:16,500
+version of proof of
+stake blockchain
+
+11
+00:00:16,500 --> 00:00:18,180
+with Redbelly.
+
+12
+00:00:18,180 --> 00:00:20,100
+I think what is
+extremely important
+
+13
+00:00:20,100 --> 00:00:23,540
+is to really find a way
+
+14
+00:00:23,540 --> 00:00:26,020
+to incentivise all
+the participants
+
+15
+00:00:26,020 --> 00:00:27,540
+to go in the right direction,
+
+16
+00:00:27,540 --> 00:00:28,480
+the same direction,
+
+17
+00:00:28,480 --> 00:00:28,720
+right?
+
+18
+00:00:28,720 --> 00:00:30,480
+And not to have
+tech-savvy people
+
+19
+00:00:30,480 --> 00:00:31,900
+that will profit on the back
+
+20
+00:00:31,900 --> 00:00:33,440
+of moms and pops.
+
+21
+00:00:33,440 --> 00:00:35,200
+So really having these kind
+
+22
+00:00:35,200 --> 00:00:36,560
+of rationals that
+are captured,
+
+23
+00:00:36,560 --> 00:00:39,300
+such that everyone is doing
+
+24
+00:00:39,300 --> 00:00:40,800
+its best so that everyone
+
+25
+00:00:40,800 --> 00:00:41,620
+can benefit.
+
+26
+00:00:41,620 --> 00:00:43,380
+You know, we're
+lowering the barrier
+
+27
+00:00:43,380 --> 00:00:45,640
+of entry to these
+economic opportunities
+
+28
+00:00:45,640 --> 00:00:48,300
+for the masses.

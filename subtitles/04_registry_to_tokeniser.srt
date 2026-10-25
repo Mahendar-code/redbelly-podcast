@@ -1,0 +1,187 @@
+1
+00:00:00,060 --> 00:00:01,220
+Yeah, so obviously
+at Redbelly,
+
+2
+00:00:01,220 --> 00:00:02,760
+we've been always
+focused on how
+
+3
+00:00:02,760 --> 00:00:05,740
+we bring financial
+services on chain.
+
+4
+00:00:05,740 --> 00:00:07,300
+And Liquidise has
+always been
+
+5
+00:00:07,300 --> 00:00:08,980
+a great partner of Redbelly,
+
+6
+00:00:08,980 --> 00:00:10,240
+and they've been
+focused specifically
+
+7
+00:00:10,240 --> 00:00:12,240
+at the time on
+private equities.
+
+8
+00:00:12,240 --> 00:00:14,180
+We saw the opportunity
+at Redbelly
+
+9
+00:00:14,180 --> 00:00:14,900
+to broaden that,
+
+10
+00:00:14,900 --> 00:00:16,600
+and obviously focused
+on other alternate
+
+11
+00:00:16,600 --> 00:00:17,100
+assets.
+
+12
+00:00:17,100 --> 00:00:18,120
+But the key to everything
+
+13
+00:00:18,120 --> 00:00:19,040
+is the registry.
+
+14
+00:00:19,040 --> 00:00:20,280
+So who holds what?
+
+15
+00:00:20,280 --> 00:00:21,060
+In a regulated environment,
+
+16
+00:00:21,060 --> 00:00:23,100
+the bearer instrument is,
+
+17
+00:00:23,100 --> 00:00:23,880
+other than cash,
+
+18
+00:00:23,880 --> 00:00:26,020
+pretty much illegal
+now across every
+
+19
+00:00:26,020 --> 00:00:26,400
+jurisdiction.
+
+20
+00:00:26,400 --> 00:00:28,280
+So there is always
+regulatory required
+
+21
+00:00:28,280 --> 00:00:29,440
+a registry.
+
+22
+00:00:29,440 --> 00:00:30,880
+And so we've been working
+
+23
+00:00:30,880 --> 00:00:32,060
+with Matt and saw
+the opportunity
+
+24
+00:00:32,060 --> 00:00:34,180
+with some of our
+other partners
+
+25
+00:00:34,180 --> 00:00:35,700
+to greatly accelerate
+that adoption
+
+26
+00:00:35,700 --> 00:00:37,360
+by helping them with
+already having
+
+27
+00:00:37,360 --> 00:00:38,300
+a tokenised registry.
+
+28
+00:00:38,300 --> 00:00:39,120
+So as Matt said,
+
+29
+00:00:39,120 --> 00:00:41,440
+we've acquired Liquidise,
+
+30
+00:00:41,440 --> 00:00:43,120
+the registry business
+and their customers,
+
+31
+00:00:43,120 --> 00:00:44,900
+and we've now
+rebranded that into
+
+32
+00:00:44,900 --> 00:00:46,580
+Tokeniser, which is
+much more focused
+
+33
+00:00:46,580 --> 00:00:47,800
+on a full cradle to grave,
+
+34
+00:00:47,800 --> 00:00:48,320
+if you like,
+
+35
+00:00:48,320 --> 00:00:50,420
+on asset origination,
+
+36
+00:00:50,420 --> 00:00:52,720
+asset servicing and
+obviously registry,
+
+37
+00:00:52,720 --> 00:00:53,840
+and then what
+everyone wants
+
+38
+00:00:53,840 --> 00:00:54,280
+to hear about,
+
+39
+00:00:54,280 --> 00:00:55,680
+the secondary trading
+opportunities
+
+40
+00:00:55,680 --> 00:00:56,660
+that will be unlocked.
+
+41
+00:00:56,660 --> 00:00:57,460
+But we've got to start with,
+
+42
+00:00:57,460 --> 00:00:58,390
+let's get the assets on.
