@@ -1,0 +1,27 @@
+{
+ "slug": "clip2-ep27-kyc-wallets",
+ "source": "rbi27",
+ "person": "Drew Bradford",
+ "size": [
+  1920,
+  1080
+ ],
+ "shots": [
+  {
+   "start": 1318.85,
+   "end": 1374.58,
+   "samples": 558,
+   "matched": 557,
+   "kind": "speaker",
+   "crop": [
+    296,
+    0,
+    1080
+   ],
+   "similarity": 0.832,
+   "face_px": 248,
+   "drift_px": 98,
+   "face_inside": true
+  }
+ ]
+}

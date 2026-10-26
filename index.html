@@ -1,400 +1,390 @@
 <!doctype html>
-<html lang="en" data-theme="dark">
+<html lang="en-AU" data-theme="dark">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Podcast Clip Pack</title>
-<meta name="description" content="Six captioned vertical clips from the latest Redbelly Insights episodes, about Redbelly technology, Project Acacia and Tokeniser, with source timestamps and post captions.">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Six subtitled vertical clips from recent Redbelly Insights episodes on Redbelly technology, Project Acacia and Tokeniser, each with its source time and a caption ready to post.">
+<link rel="icon" type="image/png" sizes="512x512" href="assets/dao-kit/icon.png">
+<meta content="website" property="og:type">
 <meta property="og:title" content="Podcast Clip Pack">
-<meta property="og:description" content="Six captioned vertical clips from the latest Redbelly Insights episodes, about Redbelly technology, Project Acacia and Tokeniser, with source timestamps and post captions.">
-<meta property="og:type" content="website">
-<meta property="og:image" content="og.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#0c1317">
-<link rel="icon" href="assets/brand/icon.png" type="image/png">
-<link rel="stylesheet" href="assets/brand/tokens.css">
+<meta property="og:description" content="Six subtitled vertical clips from recent Redbelly Insights episodes on Redbelly technology, Project Acacia and Tokeniser, each with its source time and a caption ready to post.">
+<meta property="og:image" content="assets/share-card.png">
+<meta content="summary_large_image" name="twitter:card">
 <style>
-@font-face{font-family:"Be Vietnam Pro";font-weight:400;font-display:swap;src:url(assets/fonts/BeVietnamPro-Regular.ttf) format("truetype")}
-@font-face{font-family:"Be Vietnam Pro";font-weight:500;font-display:swap;src:url(assets/fonts/BeVietnamPro-Medium.ttf) format("truetype")}
-@font-face{font-family:"Be Vietnam Pro";font-weight:600;font-display:swap;src:url(assets/fonts/BeVietnamPro-SemiBold.ttf) format("truetype")}
-@font-face{font-family:"Be Vietnam Pro";font-weight:700;font-display:swap;src:url(assets/fonts/BeVietnamPro-Bold.ttf) format("truetype")}
-@font-face{font-family:"JetBrains Mono";font-weight:100 800;font-display:swap;src:url(assets/fonts/JetBrainsMono.ttf) format("truetype")}
+@font-face{font-family:"Be Vietnam Pro";font-weight:400;font-display:swap;src:url(assets/fonts/BeVietnamPro-Regular.ttf)}
+@font-face{font-family:"Be Vietnam Pro";font-weight:500;font-display:swap;src:url(assets/fonts/BeVietnamPro-Medium.ttf)}
+@font-face{font-family:"Be Vietnam Pro";font-weight:600;font-display:swap;src:url(assets/fonts/BeVietnamPro-SemiBold.ttf)}
+@font-face{font-family:"Be Vietnam Pro";font-weight:700;font-display:swap;src:url(assets/fonts/BeVietnamPro-Bold.ttf)}
+@font-face{font-family:"JetBrains Mono";font-weight:100 800;font-display:swap;src:url(assets/fonts/JetBrainsMono.ttf)}
+:root{--ground:#0a1014;--panel:#141f26;--panel-2:#17222a;--band:#1d3140;--rule:#263641;--rule-soft:#223039;
+--ink:#f1f5f8;--ink-2:#c2ced6;--ink-3:#8fa1ad;--red:#EF5350;--red-hi:#f95a56;--accent-ink:#ffb3ae;--good:#86EFAC;--hold:#FCD34D;
+--sans:"Be Vietnam Pro",ui-sans-serif,system-ui,sans-serif;--mono:"JetBrains Mono",ui-monospace,monospace;color-scheme:dark}
+:root[data-theme="light"]{--ground:#EDF1F4;--panel:#FFFFFF;--panel-2:#F4F6F8;--band:#DDE6ED;--rule:#D3DBE1;--rule-soft:#DAE1E7;
+--ink:#0F1A22;--ink-2:#394853;--ink-3:#596975;--red-hi:#D93E3B;--accent-ink:#B3272A;--good:#15803D;--hold:#A16207;color-scheme:light}
 *{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--background-deep);color:var(--on-surface);font:400 16px/1.5 var(--font-sans)}
-a{color:var(--primary)}
-a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--brand);outline-offset:2px}
-.mono{font-family:var(--font-mono);font-weight:500;letter-spacing:.02em}
-.wrap{max-width:1180px;margin:0 auto;padding:0 var(--space-margin-mobile)}
-header.top{border-bottom:1px solid var(--panel-edge);background:var(--surface)}
-header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:72px}
-.logo{height:44px;width:auto;display:block}
-.logo-light{display:none}
-[data-theme="light"] .logo-dark{display:none}
-[data-theme="light"] .logo-light{display:block}
-.hero{background:var(--surface-steel);border-bottom:1px solid var(--panel-edge)}
-[data-theme="light"] .hero{background:#1d3140;color:#f1f5f8}
-[data-theme="light"] .hero .lede,[data-theme="light"] .hero .specs{color:#c2ced6}
-.hero .wrap{padding-top:48px;padding-bottom:48px}
-.hero h1{font-size:clamp(32px,6vw,48px);line-height:1.1;letter-spacing:-.02em;margin:12px 0 12px;font-weight:700}
-.lede{font-size:18px;line-height:1.55;max-width:70ch;color:var(--on-surface-variant);margin:0 0 20px}
-.specs{display:flex;flex-wrap:wrap;gap:8px 24px;color:var(--on-surface-variant);font-size:14px;margin:0;padding:0;list-style:none}
-.status{display:inline-flex;align-items:center;gap:8px;font-family:var(--font-mono);font-weight:500;font-size:13px;letter-spacing:.05em}
-.status i{width:8px;height:8px;border-radius:9999px;background:var(--outline);display:inline-block}
-.status.ok i{background:var(--ok)}
-.status.warn i{background:var(--warn)}
-.status.brand i{background:var(--brand)}
-section{padding:48px 0;border-bottom:1px solid var(--panel-edge)}
-h2{font-size:32px;line-height:1.2;letter-spacing:-.01em;font-weight:600;margin:0 0 8px}
-.section-lede{color:var(--on-surface-variant);max-width:70ch;margin:0 0 28px}
-.deliverables{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
-.card{background:var(--surface-slate);border:1px solid var(--panel-edge);border-radius:var(--radius-lg);padding:20px}
-.card h3{margin:0 0 6px;font-size:18px;font-weight:600}
-.card p{margin:0 0 12px;color:var(--on-surface-variant)}
-.label{font-family:var(--font-mono);font-weight:700;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--outline)}
-.clips{display:grid;gap:24px}
-.clip{display:grid;grid-template-columns:minmax(0,300px) minmax(0,1fr);gap:28px;background:var(--surface-slate);border:1px solid var(--panel-edge);border-radius:var(--radius-lg);padding:20px}
-.player video{width:100%;height:auto;aspect-ratio:9/16;border-radius:var(--radius-base);background:#070c0f;display:block}
-.row{display:flex;flex-wrap:wrap;align-items:center;gap:8px 16px;font-size:13px}
-.num{color:var(--on-surface-variant)}
-.topic{color:var(--primary)}
-.clip h3{font-size:24px;line-height:1.25;font-weight:600;margin:10px 0 8px}
-.who{margin:0 0 12px;display:flex;flex-wrap:wrap;gap:4px 10px}
-.who span{color:var(--on-surface-variant)}
-.point{margin:0 0 16px;max-width:70ch}
-.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin:0 0 16px}
-.facts div{border-top:1px solid var(--surface-container-high);padding-top:8px}
-.facts dt{font-family:var(--font-mono);font-weight:700;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--outline)}
-.facts dd{margin:2px 0 0}
-.caption{background:var(--surface-container);border:1px solid var(--panel-edge);border-radius:var(--radius-lg);padding:14px 16px;margin:0 0 16px}
-.caption-head{display:flex;justify-content:space-between;gap:12px}
-.count{font-size:12px;color:var(--outline)}
-.caption p{margin:6px 0 12px;font-size:17px}
-.actions{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 12px}
-.btn,.ghost{display:inline-flex;align-items:center;gap:8px;min-height:40px;padding:8px 14px;border-radius:var(--radius-base);font:600 15px/1.2 var(--font-sans);text-decoration:none;cursor:pointer}
-.btn{background:var(--brand);color:#fff;border:1px solid var(--brand)}
-.btn:hover{background:var(--brand-hover)}
-.btn .mono{font-size:12px;font-weight:500;opacity:.9}
-.ghost{background:transparent;color:var(--on-surface);border:1px solid var(--outline-variant)}
-.ghost:hover{border-color:var(--brand)}
-details{border-top:1px solid var(--surface-container-high);padding-top:10px}
+body{margin:0;background:var(--ground);color:var(--ink);font:400 16px/1.5 var(--sans);-webkit-text-size-adjust:100%}
+a{color:var(--accent-ink)}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--red);outline-offset:2px}
+.mono{font-family:var(--mono);font-weight:500;letter-spacing:.03em}
+.shell{max-width:1120px;margin:0 auto;padding:0 16px}
+.bar{position:sticky;top:0;z-index:5;background:var(--panel);border-bottom:1px solid var(--rule)}
+.bar .shell{display:flex;align-items:center;gap:16px;min-height:64px}
+.bar img{height:40px;width:auto}
+.bar .where{font-family:var(--mono);font-size:12px;letter-spacing:.1em;color:var(--ink-3);margin-right:auto}
+.dark-only{display:block}.light-only{display:none}
+:root[data-theme="light"] .dark-only{display:none}:root[data-theme="light"] .light-only{display:block}
+.lead{background:#1d3140;color:#f1f5f8;border-bottom:1px solid var(--rule)}
+.lead .shell{padding-top:56px;padding-bottom:48px;display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:40px;align-items:end}
+.lead h1{margin:0 0 14px;font-size:clamp(34px,6vw,48px);line-height:1.08;letter-spacing:-.02em;font-weight:700}
+.lead p{margin:0;color:#c2ced6;font-size:18px;line-height:1.55;max-width:68ch}
+.chips{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:#263641;border:1px solid #263641;border-radius:8px;overflow:hidden}
+.chips li{background:#141f26;padding:14px 16px}
+.chips b{display:block;font:600 22px/1.2 var(--mono);color:#f1f5f8}
+.chips span{font-size:13px;color:#8fa1ad}
+.part{padding:48px 0;border-bottom:1px solid var(--rule);scroll-margin-top:64px}
+.post{scroll-margin-top:80px}
+.part h2{margin:0 0 6px;font-size:30px;line-height:1.2;font-weight:600;letter-spacing:-.01em}
+.part .intro{margin:0 0 24px;color:var(--ink-2);max-width:68ch}
+.inpack{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.inpack li{display:grid;grid-template-columns:48px minmax(0,1fr) auto;gap:16px;align-items:center;background:var(--panel);border:1px solid var(--rule);border-radius:8px;padding:16px 18px}
+.inpack .no{font:700 20px/1 var(--mono);color:var(--red)}
+.inpack h3{margin:0;font-size:17px;font-weight:600}
+.inpack p{margin:2px 0 0;color:var(--ink-2);font-size:15px}
+.posts{list-style:none;margin:0;padding:0;display:grid;gap:20px}
+.post{display:grid;grid-template-columns:minmax(0,288px) minmax(0,1fr);gap:28px;background:var(--panel);border:1px solid var(--rule);border-radius:8px;padding:20px}
+.frame{margin:0}
+.frame video{display:block;width:100%;height:auto;aspect-ratio:9/16;border-radius:4px;background:#070c0f}
+.kicker{display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center;margin:0;font-size:13px;color:var(--ink-2)}
+.kicker .theme{color:var(--accent-ink)}
+.flag{display:inline-flex;align-items:center;gap:8px;font:500 12px/1 var(--mono);letter-spacing:.06em}
+.flag b{width:8px;height:8px;border-radius:9999px;background:var(--ink-3)}
+.flag.good b{background:var(--good)}.flag.hold b{background:var(--hold)}
+.post h3{margin:10px 0 6px;font-size:23px;line-height:1.25;font-weight:600}
+.byline{margin:0 0 12px;font-weight:600}
+.byline span{font-weight:400;color:var(--ink-2);margin-left:6px}
+.says{margin:0 0 16px;max-width:68ch}
+.facts{border-collapse:collapse;margin:0 0 16px;font-size:15px}
+.facts th{text-align:left;font:700 11px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);padding:6px 18px 6px 0;vertical-align:baseline}
+.facts td{padding:6px 0}
+.copybox{background:var(--panel-2);border:1px solid var(--rule);border-radius:8px;padding:14px 16px;margin:0 0 14px}
+.copyhead{display:flex;justify-content:space-between;margin:0}
+.tag{font-size:11px;font-weight:700;letter-spacing:.1em;color:var(--ink-3)}
+.tally{font-size:12px;color:var(--ink-3)}
+.copytext{margin:6px 0 12px;font-size:17px}
+.grab{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 12px}
+.solid,.quiet{display:inline-flex;align-items:center;gap:8px;min-height:40px;padding:8px 14px;border-radius:4px;font:600 15px/1.2 var(--sans);text-decoration:none;cursor:pointer}
+.solid{background:var(--red);border:1px solid var(--red);color:#fff}.solid:hover{background:var(--red-hi)}
+.solid .mono{font-size:12px;opacity:.9}
+.quiet{background:transparent;border:1px solid var(--rule);color:var(--ink)}.quiet:hover{border-color:var(--red)}
+details{border-top:1px solid var(--rule-soft);padding-top:10px}
 summary{cursor:pointer;font-weight:600}
-.transcript{color:var(--on-surface-variant);max-width:70ch}
-.note{color:var(--on-surface-variant);font-size:14px;max-width:70ch}
-.table-wrap{overflow-x:auto;border:1px solid var(--panel-edge);border-radius:var(--radius-lg)}
-table{border-collapse:collapse;width:100%;min-width:860px;font-size:14px}
-th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--surface-container-high);vertical-align:top}
-thead th{font-family:var(--font-mono);font-weight:700;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--outline);background:var(--surface-container)}
-tbody th{font-weight:500}
-td.warn{color:var(--warn)}
-.pack{list-style:none;padding:0;margin:20px 0;display:grid;gap:8px}
-.pack li{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:baseline}
-.muted{color:var(--on-surface-variant)}
-.method{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
-.method .card p:last-child{margin-bottom:0}
-footer{padding:32px 0 48px;color:var(--outline);font-size:14px}
-code{font-family:var(--font-mono);font-size:.92em}
-@media (max-width:760px){.clip{grid-template-columns:1fr}.player{max-width:340px}}
-@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+.said,.aside{color:var(--ink-2);max-width:68ch}.aside{font-size:14px}
+.scroller{overflow-x:auto;border:1px solid var(--rule);border-radius:8px}
+.grid{border-collapse:collapse;width:100%;min-width:900px;font-size:14px}
+.grid th,.grid td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--rule-soft);vertical-align:top}
+.grid thead th{font:700 11px/1.3 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);background:var(--panel-2)}
+.grid tbody th{font-weight:500}
+.grid td.hold{color:var(--hold)}
+.packlist{list-style:none;margin:18px 0;padding:0;display:grid;gap:8px}
+.packlist li{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:baseline}
+.soft{color:var(--ink-2)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px}
+.cards article{background:var(--panel);border:1px solid var(--rule);border-radius:8px;padding:18px 20px}
+.cards h3{margin:0 0 8px;font-size:17px;font-weight:600}
+.cards p{margin:0 0 10px;color:var(--ink-2)}.cards p:last-child{margin:0}
+.end{padding:28px 0 44px;color:var(--ink-3);font-size:14px}
+code{font-family:var(--mono);font-size:.92em}
+@media (max-width:520px){.bar .where{display:none}.bar .quiet{margin-left:auto}}
+@media (max-width:820px){.lead .shell{grid-template-columns:1fr}.post{grid-template-columns:1fr}.frame{max-width:340px}
+.inpack li{grid-template-columns:36px minmax(0,1fr)}.inpack li a{grid-column:2}}
 </style>
 </head>
 <body>
-<header class="top"><div class="wrap">
-  <a href="#top" aria-label="Podcast Clip Pack"><img class="logo logo-dark" src="assets/brand/dao-logo-on-dark.png" alt="Redbelly DAO" width="62" height="44"><img class="logo logo-light" src="assets/brand/dao-logo-on-light.png" alt="Redbelly DAO" width="62" height="44"></a>
-  <button type="button" class="ghost" data-theme-toggle aria-pressed="false">Light theme</button>
+<header class="bar"><div class="shell">
+  <img class="dark-only" src="assets/dao-kit/dao-logo-on-dark.png" alt="Redbelly DAO" width="56" height="40">
+  <img class="light-only" src="assets/dao-kit/dao-logo-on-light.png" alt="Redbelly DAO" width="56" height="40">
+  <span class="where">CLIP PACK  /  6 POSTS</span>
+  <button type="button" class="quiet" data-theme-switch aria-pressed="false">Light mode</button>
 </div></header>
-<main id="top">
-<div class="hero"><div class="wrap">
-  <span class="status brand"><i></i>REDBELLY INSIGHTS  /  EPISODES 29, 28, 27, 26</span>
-  <h1>Podcast Clip Pack</h1>
-  <p class="lede">Six captioned vertical clips of 30 to 60 seconds, cut from the latest official Redbelly Insights episodes. Each one makes a single point about Redbelly technology, Project Acacia or Tokeniser, opens with a hook and the speaker's name and role, and comes with a one line post caption. Ready to post on X, YouTube Shorts and Instagram while the show relaunches as Off Paper - Powered by Tokeniser.</p>
-  <ul class="specs mono"><li>6 CLIPS</li><li>325 S IN TOTAL</li><li>1080x1920  9:16</li><li>30 FPS  H.264 + AAC</li><li>-14 LUFS</li><li>SUBTITLES BURNED IN + SRT</li></ul>
-</div></div>
-
-<section><div class="wrap">
-  <h2>Deliverables</h2>
-  <p class="section-lede">Both deliverables in the brief, plus the measurements behind them.</p>
-  <div class="deliverables">
-    <div class="card"><span class="label">Deliverable 1</span><h3>Six vertical clips with subtitles</h3><p>MP4, 1080x1920, 30 fps, subtitles burned in. Each clip also has an SRT file.</p><a href="#clips">Watch and download</a></div>
-    <div class="card"><span class="label">Deliverable 2</span><h3>Source list and post captions</h3><p>Source episode, exact timestamp and a suggested post caption for every clip.</p><a href="CLIPS.md">CLIPS.md</a></div>
-    <div class="card"><span class="label">Verification</span><h3>Measured, not assumed</h3><p>Specs, loudness, subtitle accuracy, source timestamps and speaker framing, measured from the files.</p><a href="#verification">See the results</a></div>
+<main>
+<section class="lead"><div class="shell">
+  <div>
+    <h1>Podcast Clip Pack</h1>
+    <p>The strongest short moments from the latest Redbelly Insights episodes, cut to stand on their own. Every clip is vertical, subtitled, opens on a headline with the speaker's name and title, and makes one point about Redbelly technology, Project Acacia or Tokeniser. Made for the Redbelly and DAO accounts on X, YouTube Shorts and Instagram as the show relaunches as Off Paper - Powered by Tokeniser.</p>
   </div>
+  <ul class="chips">
+    <li><b>6</b><span>clips from episodes 28, 27, 26</span></li>
+    <li><b>335 s</b><span>of footage in total</span></li>
+    <li><b>1080x1920</b><span>9:16 at 30 fps, MP4</span></li>
+    <li><b>-14 LUFS</b><span>same level on every clip</span></li>
+  </ul>
 </div></section>
 
-<section id="clips"><div class="wrap">
-  <h2>The clips</h2>
-  <p class="section-lede">In posting order. The timestamp link opens the official episode video at the start of the clip.</p>
-  <div class="clips">
-<article class="clip" id="01_aussie_dollars_onshore">
-  <div class="player">
-    <video controls playsinline preload="none" poster="assets/posters/01_aussie_dollars_onshore.png" width="540" height="960">
-      <source src="clips/01_aussie_dollars_onshore.mp4" type="video/mp4">
+<section class="part"><div class="shell">
+  <h2>In this pack</h2>
+  <p class="intro">Both things the brief asks for, plus the audit that backs them up.</p>
+  <ol class="inpack">
+    <li><span class="no">1</span><div><h3>Six vertical clips with subtitles</h3><p>Subtitles burned into each MP4, and the same lines as an SRT file.</p></div><a href="#posts">Watch</a></li>
+    <li><span class="no">2</span><div><h3>Sources and post captions</h3><p>Episode, exact in and out times and a one line caption for each clip.</p></div><a href="SOURCES.md">SOURCES.md</a></li>
+    <li><span class="no">+</span><div><h3>Audit</h3><p>Specs, loudness, subtitle accuracy, source times and framing, read from the files.</p></div><a href="#qa">Results</a></li>
+  </ol>
+</div></section>
+
+<section class="part" id="posts"><div class="shell">
+  <h2>Six posts, in order</h2>
+  <p class="intro">The time under each clip links to the official episode file at the moment the clip starts.</p>
+  <ol class="posts">
+<li class="post" id="clip1-ep28-proof-of-stake-incentives">
+  <figure class="frame">
+    <video controls playsinline preload="none" poster="assets/stills/clip1-ep28-proof-of-stake-incentives.png" width="540" height="960">
+      <source src="clips/clip1-ep28-proof-of-stake-incentives.mp4" type="video/mp4">
     </video>
-  </div>
-  <div class="meta">
-    <div class="row"><span class="mono num">CLIP 01</span><span class="mono topic">REDBELLY TECHNOLOGY</span><span class="status ok"><i></i>18/18 CHECKS PASS</span></div>
-    <h3>We spend Aussie dollars. Why settle in US dollars?</h3>
-    <p class="who"><strong>Effie Dimitropoulos</strong><span>CEO, AUDD Stablecoin</span></p>
-    <p class="point">An Australian dollar stablecoin runs on Redbelly for sovereignty: every US dollar stablecoin is money that is not held onshore, so an Australian-built and Australian-operated chain keeps value in the local ecosystem.</p>
-    <dl class="facts">
-      <div><dt>Source</dt><dd>Redbelly Insights - Episode 29, 9 July 2026</dd></div>
-      <div><dt>Timestamp</dt><dd class="mono"><a href="https://storage.googleapis.com/redbelly-website.firebasestorage.app/Video/rb_ep_29_final_fde9f2a3d6/rb_ep_29_final_fde9f2a3d6.mp4#t=2623.1,2669.1" target="_blank" rel="noopener">43:43.1 to 44:29.1</a></dd></div>
-      <div><dt>Length</dt><dd class="mono">46 s</dd></div>
-    </dl>
-    <div class="caption">
-      <div class="caption-head"><span class="label">Suggested post caption</span><span class="mono count" data-count></span></div>
-      <p data-caption>We earn, spend and invest in Aussie dollars, so why settle digital assets in US dollars? AUDD CEO Effie Dimitropoulos on keeping money onshore with Australian-built Redbelly.</p>
-      <button type="button" class="ghost" data-copy>Copy caption</button>
-    </div>
-    <div class="actions">
-      <a class="btn" href="clips/01_aussie_dollars_onshore.mp4" download>Download MP4 <span class="mono">14.9 MB</span></a>
-      <a class="ghost" href="subtitles/01_aussie_dollars_onshore.srt" download>Subtitles SRT</a>
-    </div>
-    <details>
-      <summary>Subtitle text</summary>
-      <p class="transcript">Then why are we pushed in the digital asset space of dealing with US dollars, right? And why? Because they&#x27;ve been there longer, and there is that dominance, and there is that comfort. And, you know, no doubt that digital asset space is priced in US dollars. So, you know, that plays quite an important role in that. However, it all then boils down to every time you&#x27;re using a US dollar, that is, and especially a US dollar stablecoin, it&#x27;s money that&#x27;s not sitting onshore. It&#x27;s money that&#x27;s not backing your asset onshore. And so supporting the Australian ecosystem by using a blockchain like Redbelly that is an Australian-built and Australian-operated blockchain is pretty important.</p>
-      <p class="note">Effie Dimitropoulos joined remotely, so the vertical window is taken from her half of the split screen. Her role is the one shown in the episode&#x27;s own on-screen title.</p>
-    </details>
-  </div>
-</article>
-<article class="clip" id="02_regulated_proof_of_stake">
-  <div class="player">
-    <video controls playsinline preload="none" poster="assets/posters/02_regulated_proof_of_stake.png" width="540" height="960">
-      <source src="clips/02_regulated_proof_of_stake.mp4" type="video/mp4">
-    </video>
-  </div>
-  <div class="meta">
-    <div class="row"><span class="mono num">CLIP 02</span><span class="mono topic">REDBELLY TECHNOLOGY</span><span class="status ok"><i></i>18/18 CHECKS PASS</span></div>
+  </figure>
+  <div class="body">
+    <p class="kicker"><span class="mono">POST 1</span><span class="mono theme">REDBELLY TECHNOLOGY</span><span class="flag good"><b></b>18 OF 18 CHECKS</span></p>
     <h3>Proof of stake still gets hacked. What&#x27;s missing?</h3>
-    <p class="who"><strong>Vincent Gramoli</strong><span>Founder &amp; Chief Science Officer, Redbelly Network</span></p>
-    <p class="point">Proof of stake chains still get hacked. Redbelly is a regulated proof of stake chain, designed so every participant has a reason to pull in the same direction instead of tech-savvy players profiting at the expense of everyday users.</p>
-    <dl class="facts">
-      <div><dt>Source</dt><dd>Redbelly Insights - Episode 28, 11 June 2026</dd></div>
-      <div><dt>Timestamp</dt><dd class="mono"><a href="https://storage.googleapis.com/redbelly-website.firebasestorage.app/Video/rb_ep_28_final_745719acdb/rb_ep_28_final_745719acdb.mp4#t=2005.3,2053.7" target="_blank" rel="noopener">33:25.3 to 34:13.7</a></dd></div>
-      <div><dt>Length</dt><dd class="mono">48 s</dd></div>
-    </dl>
-    <div class="caption">
-      <div class="caption-head"><span class="label">Suggested post caption</span><span class="mono count" data-count></span></div>
-      <p data-caption>Proof of stake still gets hacked. Redbelly founder Vincent Gramoli on a regulated proof of stake chain where incentives line up, so tech-savvy players can&#x27;t profit at everyday investors&#x27; expense.</p>
-      <button type="button" class="ghost" data-copy>Copy caption</button>
+    <p class="byline">Vincent Gramoli <span>Founder &amp; Chief Science Officer, Redbelly Network</span></p>
+    <p class="says">Proof of stake chains still get hacked. Redbelly is a regulated proof of stake chain, designed so every participant has a reason to pull in the same direction instead of tech-savvy players profiting at the expense of everyday users.</p>
+    <table class="facts">
+      <tr><th>From</th><td>Episode 28, aired 11 June 2026</td></tr>
+      <tr><th>In and out</th><td class="mono"><a href="https://storage.googleapis.com/redbelly-website.firebasestorage.app/Video/rb_ep_28_final_745719acdb/rb_ep_28_final_745719acdb.mp4#t=2005.3,2053.7" target="_blank" rel="noopener">33:25.3 to 34:13.7</a></td></tr>
+      <tr><th>Runs</th><td class="mono">48 s</td></tr>
+    </table>
+    <div class="copybox">
+      <p class="copyhead"><span class="mono tag">POST WITH</span><span class="mono tally" data-tally></span></p>
+      <p class="copytext" data-copytext>Proof of stake still gets hacked. Redbelly founder Vincent Gramoli on a regulated proof of stake chain where incentives line up, so tech-savvy players can&#x27;t profit at everyday investors&#x27; expense.</p>
+      <button type="button" class="quiet" data-copy>Copy text</button>
     </div>
-    <div class="actions">
-      <a class="btn" href="clips/02_regulated_proof_of_stake.mp4" download>Download MP4 <span class="mono">18.4 MB</span></a>
-      <a class="ghost" href="subtitles/02_regulated_proof_of_stake.srt" download>Subtitles SRT</a>
-    </div>
+    <p class="grab">
+      <a class="solid" href="clips/clip1-ep28-proof-of-stake-incentives.mp4" download>MP4 <span class="mono">18.4 MB</span></a>
+      <a class="quiet" href="subtitles/clip1-ep28-proof-of-stake-incentives.srt" download>SRT subtitles</a>
+    </p>
     <details>
-      <summary>Subtitle text</summary>
-      <p class="transcript">So it looks like, you know, blockchain has moved and matured from proof of work that was extremely energy greedy to this proof of stake strategy that is better. But still, we can see hacks happening all the time. And now we have this regulated version of proof of stake blockchain with Redbelly. I think what is extremely important is to really find a way to incentivise all the participants to go in the right direction, the same direction, right? And not to have tech-savvy people that will profit on the back of moms and pops. So really having these kind of rationals that are captured, such that everyone is doing its best so that everyone can benefit. You know, we&#x27;re lowering the barrier of entry to these economic opportunities for the masses.</p>
+      <summary>Read the subtitles</summary>
+      <p class="said">So it looks like, you know, blockchain has moved and matured from proof of work that was extremely energy greedy to this proof of stake strategy that is better. But still, we can see hacks happening all the time. And now we have this regulated version of proof of stake blockchain with Redbelly. I think what is extremely important is to really find a way to incentivise all the participants to go in the right direction, the same direction, right? And not to have tech-savvy people that will profit on the back of moms and pops. So really having these kind of rationals that are captured, such that everyone is doing its best so that everyone can benefit. You know, we&#x27;re lowering the barrier of entry to these economic opportunities for the masses.</p>
       
     </details>
   </div>
-</article>
-<article class="clip" id="03_tokenised_bonds_next">
-  <div class="player">
-    <video controls playsinline preload="none" poster="assets/posters/03_tokenised_bonds_next.png" width="540" height="960">
-      <source src="clips/03_tokenised_bonds_next.mp4" type="video/mp4">
+</li>
+<li class="post" id="clip2-ep27-kyc-wallets">
+  <figure class="frame">
+    <video controls playsinline preload="none" poster="assets/stills/clip2-ep27-kyc-wallets.png" width="540" height="960">
+      <source src="clips/clip2-ep27-kyc-wallets.mp4" type="video/mp4">
     </video>
+  </figure>
+  <div class="body">
+    <p class="kicker"><span class="mono">POST 2</span><span class="mono theme">REDBELLY TECHNOLOGY</span><span class="flag good"><b></b>18 OF 18 CHECKS</span></p>
+    <h3>Stablecoins work like cash. Redbelly wallets are KYC&#x27;d.</h3>
+    <p class="byline">Drew Bradford <span>CEO, Macropod</span></p>
+    <p class="says">Tokenised bank deposits stay inside each bank, because the bank must know every holder, while stablecoins move between digital wallets like cash; with every Redbelly wallet already KYC&#x27;d, holders can choose who they transact with.</p>
+    <table class="facts">
+      <tr><th>From</th><td>Episode 27, aired 28 May 2026</td></tr>
+      <tr><th>In and out</th><td class="mono"><a href="https://storage.googleapis.com/redbelly-website.firebasestorage.app/Video/rb_ep_27_final_c2ee7f4a7d/rb_ep_27_final_c2ee7f4a7d.mp4#t=1318.8,1374.6" target="_blank" rel="noopener">21:58.8 to 22:54.6</a></td></tr>
+      <tr><th>Runs</th><td class="mono">56 s</td></tr>
+    </table>
+    <div class="copybox">
+      <p class="copyhead"><span class="mono tag">POST WITH</span><span class="mono tally" data-tally></span></p>
+      <p class="copytext" data-copytext>Tokenised deposits stay inside the bank. Stablecoins move like a $50 note. Macropod CEO Drew Bradford on why it matters that every wallet on Redbelly is already KYC&#x27;d.</p>
+      <button type="button" class="quiet" data-copy>Copy text</button>
+    </div>
+    <p class="grab">
+      <a class="solid" href="clips/clip2-ep27-kyc-wallets.mp4" download>MP4 <span class="mono">20.8 MB</span></a>
+      <a class="quiet" href="subtitles/clip2-ep27-kyc-wallets.srt" download>SRT subtitles</a>
+    </p>
+    <details>
+      <summary>Read the subtitles</summary>
+      <p class="said">So anybody that holds a CBA tokenised deposit, or Westpac, or NAB, or whatever, they&#x27;re going to have to do KYC: here&#x27;s my utility bill, here&#x27;s my passport, before that money can get sent to them, right? So tokenised deposits will live within a bank ecosphere, but they won&#x27;t be free moving. So stablecoins are the notes, you know, your digital version of the $50 note, the $100, and you can send it and move it instantly. And so I see that&#x27;s where they fit in the ecosphere. And anybody that has a digital wallet can take that, and you can take money off somebody, and you could set various degrees of who do I want to transact with, who don&#x27;t I want to transact with, that can all get set up. As we know, all the Redbelly wallets have been KYC&#x27;d.</p>
+      <p class="aside">KYC means know your customer: the identity checks a bank or platform runs before it deals with someone. CBA, Westpac and NAB are Australian banks.</p>
+    </details>
   </div>
-  <div class="meta">
-    <div class="row"><span class="mono num">CLIP 03</span><span class="mono topic">PROJECT ACACIA</span><span class="status ok"><i></i>18/18 CHECKS PASS</span></div>
+</li>
+<li class="post" id="clip3-ep27-tokenised-bonds">
+  <figure class="frame">
+    <video controls playsinline preload="none" poster="assets/stills/clip3-ep27-tokenised-bonds.png" width="540" height="960">
+      <source src="clips/clip3-ep27-tokenised-bonds.mp4" type="video/mp4">
+    </video>
+  </figure>
+  <div class="body">
+    <p class="kicker"><span class="mono">POST 3</span><span class="mono theme">PROJECT ACACIA</span><span class="flag good"><b></b>18 OF 18 CHECKS</span></p>
     <h3>After Project Acacia, tokenised bonds are next</h3>
-    <p class="who"><strong>Drew Bradford</strong><span>CEO, Macropod</span></p>
-    <p class="point">Tokenised bonds are the next step after Project Acacia: the RBA&#x27;s Ellis Connolly named bonds as the first cab off the rank, and Brad Jones said the question is no longer if, but when and how.</p>
-    <dl class="facts">
-      <div><dt>Source</dt><dd>Redbelly Insights - Episode 27, 28 May 2026</dd></div>
-      <div><dt>Timestamp</dt><dd class="mono"><a href="https://storage.googleapis.com/redbelly-website.firebasestorage.app/Video/rb_ep_27_final_c2ee7f4a7d/rb_ep_27_final_c2ee7f4a7d.mp4#t=1409.5,1468.2" target="_blank" rel="noopener">23:29.5 to 24:28.2</a></dd></div>
-      <div><dt>Length</dt><dd class="mono">59 s</dd></div>
-    </dl>
-    <div class="caption">
-      <div class="caption-head"><span class="label">Suggested post caption</span><span class="mono count" data-count></span></div>
-      <p data-caption>After Project Acacia, the RBA is pointing at tokenised bonds: not if, but when and how. Macropod CEO Drew Bradford on why this is coming.</p>
-      <button type="button" class="ghost" data-copy>Copy caption</button>
+    <p class="byline">Drew Bradford <span>CEO, Macropod</span></p>
+    <p class="says">Tokenised bonds are the next step after Project Acacia: the RBA&#x27;s Ellis Connolly named bonds as the first cab off the rank, and Brad Jones said the question is no longer if, but when and how.</p>
+    <table class="facts">
+      <tr><th>From</th><td>Episode 27, aired 28 May 2026</td></tr>
+      <tr><th>In and out</th><td class="mono"><a href="https://storage.googleapis.com/redbelly-website.firebasestorage.app/Video/rb_ep_27_final_c2ee7f4a7d/rb_ep_27_final_c2ee7f4a7d.mp4#t=1409.5,1468.2" target="_blank" rel="noopener">23:29.5 to 24:28.2</a></td></tr>
+      <tr><th>Runs</th><td class="mono">59 s</td></tr>
+    </table>
+    <div class="copybox">
+      <p class="copyhead"><span class="mono tag">POST WITH</span><span class="mono tally" data-tally></span></p>
+      <p class="copytext" data-copytext>After Project Acacia, the RBA is pointing at tokenised bonds: not if, but when and how. Macropod CEO Drew Bradford on why this is coming.</p>
+      <button type="button" class="quiet" data-copy>Copy text</button>
     </div>
-    <div class="actions">
-      <a class="btn" href="clips/03_tokenised_bonds_next.mp4" download>Download MP4 <span class="mono">19.1 MB</span></a>
-      <a class="ghost" href="subtitles/03_tokenised_bonds_next.srt" download>Subtitles SRT</a>
-    </div>
+    <p class="grab">
+      <a class="solid" href="clips/clip3-ep27-tokenised-bonds.mp4" download>MP4 <span class="mono">19.1 MB</span></a>
+      <a class="quiet" href="subtitles/clip3-ep27-tokenised-bonds.srt" download>SRT subtitles</a>
+    </p>
     <details>
-      <summary>Subtitle text</summary>
-      <p class="transcript">Oh, look, we tease Brad Jones, you&#x27;re not going fast enough. But look, we saw it in the budget. The only positive thing in the budget the other night was the mention of tokenised bonds, or the only positive that I talked about. So, Project Acacia, hey, you never know, it might even be out before this podcast comes out. The report, that will go through guardrails. This is where we think the market&#x27;s going. Ellis Connolly, when he testified in the parliamentary economics committee, he said Project Acacia, the first cab off the rank should be bonds and tokenised bonds. Brad Jones got up the other day at the AP+ Beyond Tomorrow payments and said, you know, it&#x27;s not if, it&#x27;s when and how. So this is coming.</p>
-      <p class="note">For the first 1.8 seconds the episode is still on the host while Drew Bradford starts to answer, so his first frame on camera is held until the episode cuts to him. The audio is unchanged.</p><p class="note">Names checked against official sources: Brad Jones is the RBA&#x27;s Assistant Governor (Financial System) and spoke at the Australian Payments Plus (AP+) Beyond Tomorrow forum; Ellis Connolly is the RBA&#x27;s Head of Payments Policy. Short host back-channel words (&quot;yeah, yeah&quot;, &quot;fantastic&quot;) are not subtitled.</p>
+      <summary>Read the subtitles</summary>
+      <p class="said">Oh, look, we tease Brad Jones, you&#x27;re not going fast enough. But look, we saw it in the budget. The only positive thing in the budget the other night was the mention of tokenised bonds, or the only positive that I talked about. So, Project Acacia, hey, you never know, it might even be out before this podcast comes out. The report, that will go through guardrails. This is where we think the market&#x27;s going. Ellis Connolly, when he testified in the parliamentary economics committee, he said Project Acacia, the first cab off the rank should be bonds and tokenised bonds. Brad Jones got up the other day at the AP+ Beyond Tomorrow payments and said, you know, it&#x27;s not if, it&#x27;s when and how. So this is coming.</p>
+      <p class="aside">For the first 1.8 seconds the episode is still on the host while Drew Bradford starts to answer, so his first frame on camera is held until the episode cuts to him. The audio is unchanged.</p><p class="aside">Names checked against official sources: Brad Jones is the RBA&#x27;s Assistant Governor (Financial System) and spoke at the Australian Payments Plus (AP+) Beyond Tomorrow forum; Ellis Connolly is the RBA&#x27;s Head of Payments Policy. Short host back-channel words (&quot;yeah, yeah&quot;, &quot;fantastic&quot;) are not subtitled.</p>
     </details>
   </div>
-</article>
-<article class="clip" id="04_registry_to_tokeniser">
-  <div class="player">
-    <video controls playsinline preload="none" poster="assets/posters/04_registry_to_tokeniser.png" width="540" height="960">
-      <source src="clips/04_registry_to_tokeniser.mp4" type="video/mp4">
+</li>
+<li class="post" id="clip4-ep26-registry-to-tokeniser">
+  <figure class="frame">
+    <video controls playsinline preload="none" poster="assets/stills/clip4-ep26-registry-to-tokeniser.png" width="540" height="960">
+      <source src="clips/clip4-ep26-registry-to-tokeniser.mp4" type="video/mp4">
     </video>
-  </div>
-  <div class="meta">
-    <div class="row"><span class="mono num">CLIP 04</span><span class="mono topic">TOKENISER</span><span class="status ok"><i></i>18/18 CHECKS PASS</span></div>
+  </figure>
+  <div class="body">
+    <p class="kicker"><span class="mono">POST 4</span><span class="mono theme">TOKENISER</span><span class="flag good"><b></b>18 OF 18 CHECKS</span></p>
     <h3>Every regulated asset needs a registry. Enter Tokeniser.</h3>
-    <p class="who"><strong>Alan Burt</strong><span>Executive Chairman, Redbelly Network</span></p>
-    <p class="point">Every regulated asset needs a registry of who holds what, so Redbelly acquired the Liquidise registry business and rebranded it Tokeniser, covering origination, servicing and the registry before secondary trading.</p>
-    <dl class="facts">
-      <div><dt>Source</dt><dd>Redbelly Insights - Episode 26, 26 March 2026</dd></div>
-      <div><dt>Timestamp</dt><dd class="mono"><a href="https://firebasestorage.googleapis.com/v0/b/redbelly-website.firebasestorage.app/o/RBI_EP26.mp4?alt=media#t=191.7,250.1" target="_blank" rel="noopener">03:11.7 to 04:10.1</a></dd></div>
-      <div><dt>Length</dt><dd class="mono">58 s</dd></div>
-    </dl>
-    <div class="caption">
-      <div class="caption-head"><span class="label">Suggested post caption</span><span class="mono count" data-count></span></div>
-      <p data-caption>Who holds what? In regulated markets, everything starts with the registry. Redbelly Executive Chairman Alan Burt on why Redbelly acquired Liquidise and relaunched it as Tokeniser.</p>
-      <button type="button" class="ghost" data-copy>Copy caption</button>
+    <p class="byline">Alan Burt <span>Executive Chairman, Redbelly Network</span></p>
+    <p class="says">Every regulated asset needs a registry of who holds what, so Redbelly acquired the Liquidise registry business and rebranded it Tokeniser, covering origination, servicing and the registry before secondary trading.</p>
+    <table class="facts">
+      <tr><th>From</th><td>Episode 26, aired 26 March 2026</td></tr>
+      <tr><th>In and out</th><td class="mono"><a href="https://firebasestorage.googleapis.com/v0/b/redbelly-website.firebasestorage.app/o/RBI_EP26.mp4?alt=media#t=191.7,250.1" target="_blank" rel="noopener">03:11.7 to 04:10.1</a></td></tr>
+      <tr><th>Runs</th><td class="mono">58 s</td></tr>
+    </table>
+    <div class="copybox">
+      <p class="copyhead"><span class="mono tag">POST WITH</span><span class="mono tally" data-tally></span></p>
+      <p class="copytext" data-copytext>Who holds what? In regulated markets, everything starts with the registry. Redbelly Executive Chairman Alan Burt on why Redbelly acquired Liquidise and relaunched it as Tokeniser.</p>
+      <button type="button" class="quiet" data-copy>Copy text</button>
     </div>
-    <div class="actions">
-      <a class="btn" href="clips/04_registry_to_tokeniser.mp4" download>Download MP4 <span class="mono">25.0 MB</span></a>
-      <a class="ghost" href="subtitles/04_registry_to_tokeniser.srt" download>Subtitles SRT</a>
-    </div>
+    <p class="grab">
+      <a class="solid" href="clips/clip4-ep26-registry-to-tokeniser.mp4" download>MP4 <span class="mono">25.0 MB</span></a>
+      <a class="quiet" href="subtitles/clip4-ep26-registry-to-tokeniser.srt" download>SRT subtitles</a>
+    </p>
     <details>
-      <summary>Subtitle text</summary>
-      <p class="transcript">Yeah, so obviously at Redbelly, we&#x27;ve been always focused on how we bring financial services on chain. And Liquidise has always been a great partner of Redbelly, and they&#x27;ve been focused specifically at the time on private equities. We saw the opportunity at Redbelly to broaden that, and obviously focused on other alternate assets. But the key to everything is the registry. So who holds what? In a regulated environment, the bearer instrument is, other than cash, pretty much illegal now across every jurisdiction. So there is always regulatory required a registry. And so we&#x27;ve been working with Matt and saw the opportunity with some of our other partners to greatly accelerate that adoption by helping them with already having a tokenised registry. So as Matt said, we&#x27;ve acquired Liquidise, the registry business and their customers, and we&#x27;ve now rebranded that into Tokeniser, which is much more focused on a full cradle to grave, if you like, on asset origination, asset servicing and obviously registry, and then what everyone wants to hear about, the secondary trading opportunities that will be unlocked. But we&#x27;ve got to start with, let&#x27;s get the assets on.</p>
-      <p class="note">Subtitle decision at 27 s: the three transcription models split between &quot;regularly&quot; and &quot;regulatory&quot; required. The subtitle follows large-v3 and the sense of the sentence, which is about what regulation requires.</p>
+      <summary>Read the subtitles</summary>
+      <p class="said">Yeah, so obviously at Redbelly, we&#x27;ve been always focused on how we bring financial services on chain. And Liquidise has always been a great partner of Redbelly, and they&#x27;ve been focused specifically at the time on private equities. We saw the opportunity at Redbelly to broaden that, and obviously focused on other alternate assets. But the key to everything is the registry. So who holds what? In a regulated environment, the bearer instrument is, other than cash, pretty much illegal now across every jurisdiction. So there is always regulatory required a registry. And so we&#x27;ve been working with Matt and saw the opportunity with some of our other partners to greatly accelerate that adoption by helping them with already having a tokenised registry. So as Matt said, we&#x27;ve acquired Liquidise, the registry business and their customers, and we&#x27;ve now rebranded that into Tokeniser, which is much more focused on a full cradle to grave, if you like, on asset origination, asset servicing and obviously registry, and then what everyone wants to hear about, the secondary trading opportunities that will be unlocked. But we&#x27;ve got to start with, let&#x27;s get the assets on.</p>
+      <p class="aside">Subtitle decision at 27 s: the three transcription models split between &quot;regularly&quot; and &quot;regulatory&quot; required. The subtitle follows large-v3 and the sense of the sentence, which is about what regulation requires.</p>
     </details>
   </div>
-</article>
-<article class="clip" id="05_acacia_fund_processes">
-  <div class="player">
-    <video controls playsinline preload="none" poster="assets/posters/05_acacia_fund_processes.png" width="540" height="960">
-      <source src="clips/05_acacia_fund_processes.mp4" type="video/mp4">
+</li>
+<li class="post" id="clip5-ep26-acacia-fund-test">
+  <figure class="frame">
+    <video controls playsinline preload="none" poster="assets/stills/clip5-ep26-acacia-fund-test.png" width="540" height="960">
+      <source src="clips/clip5-ep26-acacia-fund-test.mp4" type="video/mp4">
     </video>
-  </div>
-  <div class="meta">
-    <div class="row"><span class="mono num">CLIP 05</span><span class="mono topic">PROJECT ACACIA</span><span class="status ok"><i></i>18/18 CHECKS PASS</span></div>
+  </figure>
+  <div class="body">
+    <p class="kicker"><span class="mono">POST 5</span><span class="mono theme">PROJECT ACACIA</span><span class="flag good"><b></b>18 OF 18 CHECKS</span></p>
     <h3>What Project Acacia tested inside a real fund</h3>
-    <p class="who"><strong>Matt Mills</strong><span>Chief Customer Officer, Tokeniser</span></p>
-    <p class="point">In Project Acacia, Tokeniser used a real fund, with TAF Capital as trustee and Macropod&#x27;s AUDM stablecoin for settlement, to run subscriptions, distributions and redemptions in fully tokenised form.</p>
-    <dl class="facts">
-      <div><dt>Source</dt><dd>Redbelly Insights - Episode 26, 26 March 2026</dd></div>
-      <div><dt>Timestamp</dt><dd class="mono"><a href="https://firebasestorage.googleapis.com/v0/b/redbelly-website.firebasestorage.app/o/RBI_EP26.mp4?alt=media#t=1059.0,1118.8" target="_blank" rel="noopener">17:39.0 to 18:38.8</a></dd></div>
-      <div><dt>Length</dt><dd class="mono">60 s</dd></div>
-    </dl>
-    <div class="caption">
-      <div class="caption-head"><span class="label">Suggested post caption</span><span class="mono count" data-count></span></div>
-      <p data-caption>A real fund, a real stablecoin, three everyday fund processes. Tokeniser&#x27;s Matt Mills on what Project Acacia tested, and why tokenised fund processes are quicker, safer and more transparent.</p>
-      <button type="button" class="ghost" data-copy>Copy caption</button>
+    <p class="byline">Matt Mills <span>Chief Customer Officer, Tokeniser</span></p>
+    <p class="says">In Project Acacia, Tokeniser used a real fund, with TAF Capital as trustee and Macropod&#x27;s AUDM stablecoin for settlement, to run subscriptions, distributions and redemptions in fully tokenised form.</p>
+    <table class="facts">
+      <tr><th>From</th><td>Episode 26, aired 26 March 2026</td></tr>
+      <tr><th>In and out</th><td class="mono"><a href="https://firebasestorage.googleapis.com/v0/b/redbelly-website.firebasestorage.app/o/RBI_EP26.mp4?alt=media#t=1059.0,1118.8" target="_blank" rel="noopener">17:39.0 to 18:38.8</a></td></tr>
+      <tr><th>Runs</th><td class="mono">60 s</td></tr>
+    </table>
+    <div class="copybox">
+      <p class="copyhead"><span class="mono tag">POST WITH</span><span class="mono tally" data-tally></span></p>
+      <p class="copytext" data-copytext>A real fund, a real stablecoin, three everyday fund processes. Tokeniser&#x27;s Matt Mills on what Project Acacia tested, and why tokenised fund processes are quicker, safer and more transparent.</p>
+      <button type="button" class="quiet" data-copy>Copy text</button>
     </div>
-    <div class="actions">
-      <a class="btn" href="clips/05_acacia_fund_processes.mp4" download>Download MP4 <span class="mono">18.1 MB</span></a>
-      <a class="ghost" href="subtitles/05_acacia_fund_processes.srt" download>Subtitles SRT</a>
-    </div>
+    <p class="grab">
+      <a class="solid" href="clips/clip5-ep26-acacia-fund-test.mp4" download>MP4 <span class="mono">18.1 MB</span></a>
+      <a class="quiet" href="subtitles/clip5-ep26-acacia-fund-test.srt" download>SRT subtitles</a>
+    </p>
     <details>
-      <summary>Subtitle text</summary>
-      <p class="transcript">So Tokeniser had the privilege of also being involved in Project Acacia. We had the benefit of working with both the trustee, TAF Capital, who were fantastic partners in letting us essentially use one of their funds as a guinea pig for the purpose of Project Acacia, and Macropod, who supplied and provided the AUD stablecoin, AUDM, infrastructure for which we could settle against any transactions. So one of the cool things that Tokeniser did was essentially, as rightly pointed out, tackle some of those processes and payments in a fully tokenised fashion. And the goal was to demonstrate just how much quicker, safer and more transparent those processes would be in a tokenised fashion versus a traditional style. So to give an example, we tried to essentially conduct three normal, common processes that exist in any fund. Those were the subscriptions: how does an investor acquire the units? They were the distributions and the redemptions.</p>
-      <p class="note">For the first 0.7 seconds the episode is still on the host while Matt Mills starts to answer, so his first frame on camera is held until the episode cuts to him. The audio is unchanged.</p><p class="note">TAF Capital was the trustee of the Project Acacia fund, and Macropod issues the AUDM stablecoin used for settlement.</p>
+      <summary>Read the subtitles</summary>
+      <p class="said">So Tokeniser had the privilege of also being involved in Project Acacia. We had the benefit of working with both the trustee, TAF Capital, who were fantastic partners in letting us essentially use one of their funds as a guinea pig for the purpose of Project Acacia, and Macropod, who supplied and provided the AUD stablecoin, AUDM, infrastructure for which we could settle against any transactions. So one of the cool things that Tokeniser did was essentially, as rightly pointed out, tackle some of those processes and payments in a fully tokenised fashion. And the goal was to demonstrate just how much quicker, safer and more transparent those processes would be in a tokenised fashion versus a traditional style. So to give an example, we tried to essentially conduct three normal, common processes that exist in any fund. Those were the subscriptions: how does an investor acquire the units? They were the distributions and the redemptions.</p>
+      <p class="aside">For the first 0.7 seconds the episode is still on the host while Matt Mills starts to answer, so his first frame on camera is held until the episode cuts to him. The audio is unchanged.</p><p class="aside">TAF Capital was the trustee of the Project Acacia fund, and Macropod issues the AUDM stablecoin used for settlement.</p>
     </details>
   </div>
-</article>
-<article class="clip" id="06_tokeniser_investor_portal">
-  <div class="player">
-    <video controls playsinline preload="none" poster="assets/posters/06_tokeniser_investor_portal.png" width="540" height="960">
-      <source src="clips/06_tokeniser_investor_portal.mp4" type="video/mp4">
+</li>
+<li class="post" id="clip6-ep26-investor-portal">
+  <figure class="frame">
+    <video controls playsinline preload="none" poster="assets/stills/clip6-ep26-investor-portal.png" width="540" height="960">
+      <source src="clips/clip6-ep26-investor-portal.mp4" type="video/mp4">
     </video>
-  </div>
-  <div class="meta">
-    <div class="row"><span class="mono num">CLIP 06</span><span class="mono topic">TOKENISER</span><span class="status ok"><i></i>18/18 CHECKS PASS</span></div>
+  </figure>
+  <div class="body">
+    <p class="kicker"><span class="mono">POST 6</span><span class="mono theme">TOKENISER</span><span class="flag good"><b></b>18 OF 18 CHECKS</span></p>
     <h3>What investors see when they log in to Tokeniser</h3>
-    <p class="who"><strong>Matt Mills</strong><span>Chief Customer Officer, Tokeniser</span></p>
-    <p class="point">Tokeniser gives investors a familiar web portal: log in, see holdings and their value, download statements and certificates and receive announcements, which makes the issuer look serious and puts investors first.</p>
-    <dl class="facts">
-      <div><dt>Source</dt><dd>Redbelly Insights - Episode 26, 26 March 2026</dd></div>
-      <div><dt>Timestamp</dt><dd class="mono"><a href="https://firebasestorage.googleapis.com/v0/b/redbelly-website.firebasestorage.app/o/RBI_EP26.mp4?alt=media#t=1393.7,1448.0" target="_blank" rel="noopener">23:13.7 to 24:08.0</a></dd></div>
-      <div><dt>Length</dt><dd class="mono">54 s</dd></div>
-    </dl>
-    <div class="caption">
-      <div class="caption-head"><span class="label">Suggested post caption</span><span class="mono count" data-count></span></div>
-      <p data-caption>Log in, see your holdings, download your statements. Tokeniser&#x27;s Matt Mills on why tokenised assets should feel like a modern investor portal, and why investors are the real customers.</p>
-      <button type="button" class="ghost" data-copy>Copy caption</button>
+    <p class="byline">Matt Mills <span>Chief Customer Officer, Tokeniser</span></p>
+    <p class="says">Tokeniser gives investors a familiar web portal: log in, see holdings and their value, download statements and certificates and receive announcements, which makes the issuer look serious and puts investors first.</p>
+    <table class="facts">
+      <tr><th>From</th><td>Episode 26, aired 26 March 2026</td></tr>
+      <tr><th>In and out</th><td class="mono"><a href="https://firebasestorage.googleapis.com/v0/b/redbelly-website.firebasestorage.app/o/RBI_EP26.mp4?alt=media#t=1393.7,1448.0" target="_blank" rel="noopener">23:13.7 to 24:08.0</a></td></tr>
+      <tr><th>Runs</th><td class="mono">54 s</td></tr>
+    </table>
+    <div class="copybox">
+      <p class="copyhead"><span class="mono tag">POST WITH</span><span class="mono tally" data-tally></span></p>
+      <p class="copytext" data-copytext>Log in, see your holdings, download your statements. Tokeniser&#x27;s Matt Mills on why tokenised assets should feel like a modern investor portal, and why investors are the real customers.</p>
+      <button type="button" class="quiet" data-copy>Copy text</button>
     </div>
-    <div class="actions">
-      <a class="btn" href="clips/06_tokeniser_investor_portal.mp4" download>Download MP4 <span class="mono">16.5 MB</span></a>
-      <a class="ghost" href="subtitles/06_tokeniser_investor_portal.srt" download>Subtitles SRT</a>
-    </div>
+    <p class="grab">
+      <a class="solid" href="clips/clip6-ep26-investor-portal.mp4" download>MP4 <span class="mono">16.5 MB</span></a>
+      <a class="quiet" href="subtitles/clip6-ep26-investor-portal.srt" download>SRT subtitles</a>
+    </p>
     <details>
-      <summary>Subtitle text</summary>
-      <p class="transcript">And from a user experience, it&#x27;s very much that traditional web experience. You get invited to view your holdings in a particular company or fund. You register an account, you log in and have a dashboard where you can see your holdings, see the value of those holdings. You can download statements, whether they&#x27;re holding statements, share certificates, unit certificates, receive communications in the form of announcements or communications from the company or funds. And what&#x27;s nice about that, and the user feedback we&#x27;ve gotten from our existing clients, has been that it&#x27;s modern, it&#x27;s fast, and most importantly, it looks and makes the issuer look serious, and shows that they care about the investor experience. And that&#x27;s something that really matters to us, because we know that at the end of the day, even though it&#x27;s the trustees or the companies that pay our fees and subscribe or use the product, they&#x27;re doing it for the benefit of their investors. And we know our real customers are those investors, and getting a really good experience.</p>
-      <p class="note">From 49.8 s to 52.1 s of the clip (episode 24:03.5 to 24:05.9) the episode cuts away from Matt Mills, so his last frame is held with a slow push-in while the audio carries on.</p>
+      <summary>Read the subtitles</summary>
+      <p class="said">And from a user experience, it&#x27;s very much that traditional web experience. You get invited to view your holdings in a particular company or fund. You register an account, you log in and have a dashboard where you can see your holdings, see the value of those holdings. You can download statements, whether they&#x27;re holding statements, share certificates, unit certificates, receive communications in the form of announcements or communications from the company or funds. And what&#x27;s nice about that, and the user feedback we&#x27;ve gotten from our existing clients, has been that it&#x27;s modern, it&#x27;s fast, and most importantly, it looks and makes the issuer look serious, and shows that they care about the investor experience. And that&#x27;s something that really matters to us, because we know that at the end of the day, even though it&#x27;s the trustees or the companies that pay our fees and subscribe or use the product, they&#x27;re doing it for the benefit of their investors. And we know our real customers are those investors, and getting a really good experience.</p>
+      <p class="aside">From 49.8 s to 52.1 s of the clip (episode 24:03.5 to 24:05.9) the episode cuts away from Matt Mills, so his last frame is held with a slow push-in while the audio carries on.</p>
     </details>
   </div>
-</article></div>
+</li></ol>
 </div></section>
 
-<section id="verification"><div class="wrap">
-  <h2>Verification</h2>
-  <p class="section-lede">Measured by <code>tools/verify.py</code> from the rendered files. The source timestamp check cross-correlates each clip's audio with the official episode at the stated time. Subtitles are compared with an independent transcript of the finished clip. The speaker check runs face recognition on five frames per second.</p>
+<section class="part" id="qa"><div class="shell">
+  <h2>Checked from the files</h2>
+  <p class="intro">Read by <code>pipeline/audit.py</code> from the finished clips. Each clip's audio is matched against the official episode at the time listed for it, its subtitles are compared with a fresh transcript from a separate model, and face recognition looks for the speaker five times a second.</p>
   
-<div class="table-wrap"><table>
-<thead><tr><th>Clip</th><th>Video</th><th>Length</th><th>Loudness</th><th>Source timestamp</th><th>Subtitles vs audio</th><th>Speaker in frame</th></tr></thead>
-<tbody><tr><th scope="row" class="mono">01_aussie_dollars_onshore</th>
-<td class="mono">1080x1920 / 30 fps</td>
-<td class="mono">45.9 s</td>
-<td class="mono ok">-14.3 LUFS / -2.2 dBTP</td>
-<td class="mono ok">offset -0.002 s, correlation 0.99</td>
-<td class="mono ok">WER 2.5% (raw 7.6%)</td>
-<td class="mono ok">230/230 sampled frames (100%)</td></tr><tr><th scope="row" class="mono">02_regulated_proof_of_stake</th>
-<td class="mono">1080x1920 / 30 fps</td>
-<td class="mono">48.4 s</td>
-<td class="mono ok">-14.4 LUFS / -2.2 dBTP</td>
-<td class="mono ok">offset -0.002 s, correlation 0.98</td>
-<td class="mono ok">WER 1.5% (raw 3.7%)</td>
-<td class="mono ok">241/243 sampled frames (99%)</td></tr><tr><th scope="row" class="mono">03_tokenised_bonds_next</th>
-<td class="mono">1080x1920 / 30 fps</td>
-<td class="mono">58.7 s</td>
-<td class="mono ok">-14.6 LUFS / -2.1 dBTP</td>
-<td class="mono ok">offset -0.002 s, correlation 0.98</td>
-<td class="mono ok">WER 6.2% (raw 15.5%)</td>
-<td class="mono ok">294/294 sampled frames (100%)</td></tr><tr><th scope="row" class="mono">04_registry_to_tokeniser</th>
-<td class="mono">1080x1920 / 30 fps</td>
-<td class="mono">58.4 s</td>
-<td class="mono ok">-14.6 LUFS / -2.3 dBTP</td>
-<td class="mono ok">offset -0.002 s, correlation 0.98</td>
-<td class="mono ok">WER 3.1% (raw 7.8%)</td>
-<td class="mono ok">292/292 sampled frames (100%)</td></tr><tr><th scope="row" class="mono">05_acacia_fund_processes</th>
-<td class="mono">1080x1920 / 30 fps</td>
-<td class="mono">59.9 s</td>
-<td class="mono ok">-14.7 LUFS / -2.2 dBTP</td>
-<td class="mono ok">offset -0.002 s, correlation 0.98</td>
-<td class="mono ok">WER 2.6% (raw 6.4%)</td>
-<td class="mono ok">300/300 sampled frames (100%)</td></tr><tr><th scope="row" class="mono">06_tokeniser_investor_portal</th>
-<td class="mono">1080x1920 / 30 fps</td>
-<td class="mono">54.3 s</td>
-<td class="mono ok">-14.9 LUFS / -2.1 dBTP</td>
-<td class="mono ok">offset -0.002 s, correlation 0.96</td>
-<td class="mono ok">WER 2.3% (raw 2.3%)</td>
-<td class="mono ok">272/272 sampled frames (100%)</td></tr></tbody></table></div>
-<ul class="pack"><li><span class="status ok"><i></i>PASS</span>clip_count: <span class="mono">6</span></li><li><span class="status ok"><i></i>PASS</span>loudness spread: <span class="mono">0.6 LU (-14.9 to -14.3 LUFS)</span></li><li><span class="status ok"><i></i>PASS</span>six distinct points: <span class="mono">6</span></li><li><span class="status ok"><i></i>PASS</span>no overlapping source ranges: <span class="mono">none</span></li><li><span class="status ok"><i></i>PASS</span>covers Redbelly technology, Project Acacia, Tokeniser: <span class="mono">Project Acacia, Redbelly technology, Tokeniser</span></li><li><span class="status ok"><i></i>PASS</span>docs: names, terms, credits, dashes, emoji: <span class="mono">clean</span></li></ul>
-<p class="muted">Overall: <span class="status ok"><i></i>PASS</span>
-Every check, per clip, is in <a href="VERIFICATION.md">VERIFICATION.md</a> and <a href="verification/report.json">report.json</a>.</p>
+<div class="scroller"><table class="grid">
+<thead><tr><th>Clip</th><th>File</th><th>Audio level</th><th>Matches source at stated time</th><th>Subtitles against audio</th><th>Speaker on screen</th></tr></thead>
+<tbody><tr><th scope="row" class="mono">clip1-ep28-proof-of-stake-incentives</th>
+<td class="mono">1080x1920, 30 fps, 48.4 s</td>
+<td class="mono">-14.4 LUFS, peak -2.2 dBTP</td>
+<td class="mono">offset -0.002 s, correlation 0.98</td><td class="mono">WER 3.0% (raw 5.2%)</td><td class="mono">241/243 sampled frames (99%)</td></tr><tr><th scope="row" class="mono">clip2-ep27-kyc-wallets</th>
+<td class="mono">1080x1920, 30 fps, 55.7 s</td>
+<td class="mono">-14.6 LUFS, peak -2.2 dBTP</td>
+<td class="mono">offset -0.002 s, correlation 0.97</td><td class="mono">WER 9.2% (raw 14.1%)</td><td class="mono">276/279 sampled frames (99%)</td></tr><tr><th scope="row" class="mono">clip3-ep27-tokenised-bonds</th>
+<td class="mono">1080x1920, 30 fps, 58.7 s</td>
+<td class="mono">-14.6 LUFS, peak -2.1 dBTP</td>
+<td class="mono">offset -0.002 s, correlation 0.98</td><td class="mono">WER 5.4% (raw 14.7%)</td><td class="mono">294/294 sampled frames (100%)</td></tr><tr><th scope="row" class="mono">clip4-ep26-registry-to-tokeniser</th>
+<td class="mono">1080x1920, 30 fps, 58.4 s</td>
+<td class="mono">-14.6 LUFS, peak -2.3 dBTP</td>
+<td class="mono">offset -0.002 s, correlation 0.98</td><td class="mono">WER 3.7% (raw 8.3%)</td><td class="mono">292/292 sampled frames (100%)</td></tr><tr><th scope="row" class="mono">clip5-ep26-acacia-fund-test</th>
+<td class="mono">1080x1920, 30 fps, 59.9 s</td>
+<td class="mono">-14.7 LUFS, peak -2.2 dBTP</td>
+<td class="mono">offset -0.002 s, correlation 0.98</td><td class="mono">WER 1.9% (raw 4.5%)</td><td class="mono">300/300 sampled frames (100%)</td></tr><tr><th scope="row" class="mono">clip6-ep26-investor-portal</th>
+<td class="mono">1080x1920, 30 fps, 54.3 s</td>
+<td class="mono">-14.9 LUFS, peak -2.1 dBTP</td>
+<td class="mono">offset -0.002 s, correlation 0.96</td><td class="mono">WER 2.3% (raw 2.3%)</td><td class="mono">272/272 sampled frames (100%)</td></tr></tbody></table></div>
+<ul class="packlist"><li><span class="flag good"><b></b>PASS</span>six clips <span class="mono">6</span></li><li><span class="flag good"><b></b>PASS</span>loudness spread <span class="mono">0.5 LU (-14.9 to -14.4 LUFS)</span></li><li><span class="flag good"><b></b>PASS</span>six distinct points <span class="mono">6</span></li><li><span class="flag good"><b></b>PASS</span>no overlapping source ranges <span class="mono">none</span></li><li><span class="flag good"><b></b>PASS</span>covers Redbelly technology, Project Acacia, Tokeniser <span class="mono">Project Acacia, Redbelly technology, Tokeniser</span></li><li><span class="flag good"><b></b>PASS</span>docs: names, terms, credits, dashes, emoji <span class="mono">clean</span></li></ul>
+<p class="soft"><span class="flag good"><b></b>PASS</span> Full readings for every clip are in <a href="QA.md">QA.md</a> and <a href="qa/results.json">qa/results.json</a>.</p>
 </div></section>
 
-<section id="method"><div class="wrap">
-  <h2>How the pack was made</h2>
-  <p class="section-lede">Everything here can be rebuilt from the official episode files with the scripts in <code>tools/</code>.</p>
-  <div class="method"><div class="card"><h3>Latest episodes first</h3><p>The official episode page, redbelly.network/ama, lists Episode 29 (9 July 2026) as the most recent Redbelly Insights episode. Episodes 25 to 29 were downloaded from the official links on that page and transcribed, newest first.</p><p>Only passages about Redbelly technology, Project Acacia or Tokeniser were considered. Each clip had to make one point that holds up for someone who has never heard of Redbelly, and no two clips could make the same point.</p></div><div class="card"><h3>One continuous passage per clip</h3><p>Every clip is a single uninterrupted stretch of the episode. Nothing inside a clip is cut, reordered or joined, so no quote can be edited into a different meaning.</p><p>Clips start and end on sentence boundaries, and the exact source range is listed for each clip and checked against the episode audio.</p></div><div class="card"><h3>Subtitles you can trust</h3><p>The subtitle text was proof-read word for word against three separate Whisper transcriptions (small.en, medium.en and large-v3), and every name and role was checked against official pages: redbelly.network, tokeniser.com and the guest&#x27;s own company site.</p><p>Redbelly terms follow the brief: Redbelly, RBNT, Tokeniser, Project Acacia, with Australian spelling throughout. Hesitations such as &quot;um&quot; are left out. Subtitles are burned in, with the spoken word highlighted, and also shipped as SRT.</p></div><div class="card"><h3>Speaker in shot</h3><p>The episodes are 16:9. Each camera shot is found automatically and the speaker is located by face recognition, so the vertical window is set on the person speaking, never on the host. The window is fixed for each shot, so it never drifts or wobbles.</p><p>Where the episode itself cuts to the host for a moment, the speaker&#x27;s last frame is held while the audio carries on. Those moments are listed in CLIPS.md.</p></div><div class="card"><h3>Even audio, nothing added</h3><p>Only the episode&#x27;s own audio is used. Each clip is normalised with two-pass EBU R128 loudness to -14 LUFS integrated, the level X, YouTube and Instagram play at, with a peak limiter that keeps the true peak below -2 dBTP. All six sound the same.</p><p>No music, sound effects or third party material has been added.</p></div><div class="card"><h3>Brand and layout</h3><p>Clips and page follow the Redbelly DAO Task Board brand kit: slate surfaces, one red accent, Be Vietnam Pro for copy, JetBrains Mono for machine values such as episode numbers and timestamps, and the DAO logo on dark without a plate.</p><p>The hook, the speaker&#x27;s name and role and the captions all sit clear of the bottom band where X, Shorts, Reels and TikTok draw their own buttons and text.</p></div></div>
+<section class="part" id="making-of"><div class="shell">
+  <h2>Behind the cuts</h2>
+  <p class="intro">Everything here can be rebuilt from the official episode files with the scripts in <code>pipeline/</code>.</p>
+  <div class="cards"><article><h3>Newest episodes first</h3><p>The official episode page, redbelly.network/ama, has Episode 29 (9 July 2026) as its newest Redbelly Insights episode. Episodes 25 to 29 were downloaded from the links on that page and read through, newest first.</p><p>A moment made the cut only if it was about Redbelly technology, Project Acacia or Tokeniser, landed one point that a newcomer can follow, and said something no other clip in the pack says.</p></article><article><h3>No edits inside a clip</h3><p>Each clip runs straight through from its first word to its last. Nothing is removed from the middle and nothing is stitched together, so a speaker cannot be made to say something they did not say.</p><p>In and out points sit in the silence between two words, and the audit checks each clip&#x27;s audio against the episode at the listed time.</p></article><article><h3>Subtitles checked three ways</h3><p>Three speech models (Whisper small.en, medium.en and large-v3) each transcribed every clip. The subtitles were settled word by word against all three, and names and titles were checked on redbelly.network, tokeniser.com and each guest&#x27;s company site.</p><p>Terms follow the brief: Redbelly, RBNT, Tokeniser, Project Acacia, in Australian spelling. Stammers and words like um are left out. The lines are burned in with the current word picked out in red, and also supplied as SRT.</p></article><article><h3>The speaker stays on screen</h3><p>Face recognition finds the speaker in each camera shot of the 16:9 episode, so the square window always sits on the person talking rather than the host. Within a shot the window does not move.</p><p>Where the episode itself shows the host for a moment while the guest talks, the guest&#x27;s nearest frame is held and the sound carries on. SOURCES.md lists each of these.</p></article><article><h3>One level for all six</h3><p>Only the episode&#x27;s own sound is used. Every clip is measured and brought to -14 LUFS, the level X, YouTube and Instagram play at, with a limiter holding true peaks below -2 dBTP, so the six play at the same volume.</p><p>Nothing has been added: no music, no effects, no outside footage.</p></article><article><h3>In the DAO&#x27;s colours</h3><p>Clips and page use the Redbelly DAO Task Board brand kit: slate backgrounds, one red accent, Be Vietnam Pro for words, JetBrains Mono for numbers such as episode and time, and the DAO logo on dark with no plate.</p><p>Headline, name plate and captions sit above the strip at the bottom where X, Shorts, Reels and TikTok draw their own buttons.</p></article></div>
 </div></section>
 </main>
-<footer><div class="wrap">
-  <p>All footage and audio are from official Redbelly Insights episodes published at <a href="https://redbelly.network/ama">redbelly.network/ama</a>. No music or third party material has been added. Styled with the Redbelly DAO Task Board brand kit. Be Vietnam Pro and JetBrains Mono are used under the SIL Open Font License.</p>
+<footer class="end"><div class="shell">
+  <p>Footage and sound come only from official Redbelly Insights episodes at <a href="https://redbelly.network/ama">redbelly.network/ama</a>. No music or outside material is added. Look and logo from the Redbelly DAO Task Board brand kit. Be Vietnam Pro and JetBrains Mono are used under the SIL Open Font License.</p>
 </div></footer>
 <script>
 (function(){
-  var root=document.documentElement, btn=document.querySelector('[data-theme-toggle]');
-  function set(t){root.setAttribute('data-theme',t);if(btn){btn.textContent=t==='dark'?'Light theme':'Dark theme';btn.setAttribute('aria-pressed',t==='light')}}
-  var saved=null;try{saved=localStorage.getItem('theme')}catch(e){}
-  set(saved==='light'?'light':'dark');
-  if(btn){btn.addEventListener('click',function(){var t=root.getAttribute('data-theme')==='dark'?'light':'dark';set(t);try{localStorage.setItem('theme',t)}catch(e){}})}
-  document.querySelectorAll('.caption').forEach(function(box){
-    var p=box.querySelector('[data-caption]'),c=box.querySelector('[data-count]'),b=box.querySelector('[data-copy]');
-    var n=Array.from(p.textContent).length;c.textContent=n+' / 280';
-    b.addEventListener('click',function(){
-      var done=function(){b.textContent='Copied';setTimeout(function(){b.textContent='Copy caption'},1600)};
-      if(navigator.clipboard){navigator.clipboard.writeText(p.textContent).then(done,function(){})}
-      else{var r=document.createRange();r.selectNodeContents(p);var s=getSelection();s.removeAllRanges();s.addRange(r);document.execCommand('copy');done()}
+  var doc=document.documentElement, toggle=document.querySelector('[data-theme-switch]');
+  function apply(mode){doc.setAttribute('data-theme',mode);if(toggle){toggle.textContent=mode==='dark'?'Light mode':'Dark mode';toggle.setAttribute('aria-pressed',String(mode==='light'))}}
+  var stored=null;try{stored=localStorage.getItem('clip-pack-theme')}catch(e){}
+  apply(stored==='light'?'light':'dark');
+  if(toggle){toggle.addEventListener('click',function(){var next=doc.getAttribute('data-theme')==='dark'?'light':'dark';apply(next);try{localStorage.setItem('clip-pack-theme',next)}catch(e){}})}
+  Array.prototype.forEach.call(document.querySelectorAll('.copybox'),function(box){
+    var text=box.querySelector('[data-copytext]'),tally=box.querySelector('[data-tally]'),btn=box.querySelector('[data-copy]');
+    tally.textContent=Array.from(text.textContent).length+' OF 280 FOR X';
+    btn.addEventListener('click',function(){
+      var done=function(){btn.textContent='Copied';setTimeout(function(){btn.textContent='Copy text'},1500)};
+      if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(text.textContent).then(done,function(){})}
+      else{var range=document.createRange();range.selectNodeContents(text);var sel=window.getSelection();sel.removeAllRanges();sel.addRange(range);document.execCommand('copy');done()}
     });
   });
-  document.querySelectorAll('video').forEach(function(v){v.addEventListener('play',function(){document.querySelectorAll('video').forEach(function(o){if(o!==v)o.pause()})})});
+  var vids=document.querySelectorAll('video');
+  Array.prototype.forEach.call(vids,function(v){v.addEventListener('play',function(){Array.prototype.forEach.call(vids,function(o){if(o!==v){o.pause()}})})});
 })();
 </script>
 </body>

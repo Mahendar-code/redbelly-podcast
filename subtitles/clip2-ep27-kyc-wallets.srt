@@ -1,0 +1,130 @@
+1
+00:00:00,000 --> 00:00:01,950
+So anybody that holds a CBA
+
+2
+00:00:01,950 --> 00:00:03,330
+tokenised deposit,
+or Westpac,
+
+3
+00:00:03,330 --> 00:00:04,250
+or NAB, or whatever,
+
+4
+00:00:04,250 --> 00:00:05,830
+they're going to have to do
+
+5
+00:00:05,830 --> 00:00:08,570
+KYC: here's my utility bill,
+
+6
+00:00:08,570 --> 00:00:09,710
+here's my passport,
+
+7
+00:00:09,710 --> 00:00:12,090
+before that money
+can get sent
+
+8
+00:00:12,090 --> 00:00:13,090
+to them, right?
+
+9
+00:00:13,090 --> 00:00:14,110
+So
+
+10
+00:00:15,870 --> 00:00:17,830
+tokenised deposits will live
+
+11
+00:00:17,870 --> 00:00:19,130
+within a bank ecosphere,
+
+12
+00:00:19,130 --> 00:00:21,650
+but they won't
+be free moving.
+
+13
+00:00:21,650 --> 00:00:24,810
+So stablecoins are the notes,
+
+14
+00:00:24,810 --> 00:00:26,410
+you know, your
+digital version
+
+15
+00:00:26,410 --> 00:00:27,970
+of the $50 note,
+
+16
+00:00:27,970 --> 00:00:31,250
+the $100, and you can send
+
+17
+00:00:31,250 --> 00:00:32,630
+it and move it instantly.
+
+18
+00:00:32,630 --> 00:00:34,610
+And so I see that's where
+
+19
+00:00:34,610 --> 00:00:36,230
+they fit in the ecosphere.
+
+20
+00:00:36,230 --> 00:00:38,290
+And anybody that
+has a digital
+
+21
+00:00:38,290 --> 00:00:39,330
+wallet can take that,
+
+22
+00:00:39,330 --> 00:00:40,950
+and you can take money off
+
+23
+00:00:40,950 --> 00:00:42,970
+somebody, and you
+
+24
+00:00:43,330 --> 00:00:46,050
+could set various
+degrees of who
+
+25
+00:00:46,050 --> 00:00:47,390
+do I want to transact with,
+
+26
+00:00:47,390 --> 00:00:48,670
+who don't I want to transact
+
+27
+00:00:48,670 --> 00:00:49,750
+with, that can all get set
+
+28
+00:00:49,750 --> 00:00:49,910
+up.
+
+29
+00:00:49,910 --> 00:00:50,730
+As we know,
+
+30
+00:00:50,730 --> 00:00:54,830
+all the Redbelly
+wallets have been
+
+31
+00:00:54,830 --> 00:00:55,730
+KYC'd.

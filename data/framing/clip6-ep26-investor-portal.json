@@ -1,0 +1,50 @@
+{
+ "slug": "clip6-ep26-investor-portal",
+ "source": "rbi26",
+ "person": "Matt Mills",
+ "size": [
+  1280,
+  720
+ ],
+ "shots": [
+  {
+   "start": 1393.72,
+   "end": 1443.52,
+   "samples": 498,
+   "matched": 498,
+   "kind": "speaker",
+   "crop": [
+    88,
+    60,
+    464
+   ],
+   "similarity": 0.829,
+   "face_px": 103,
+   "drift_px": 79,
+   "face_inside": true
+  },
+  {
+   "start": 1443.52,
+   "end": 1445.853,
+   "samples": 24,
+   "matched": 0,
+   "kind": "cutaway"
+  },
+  {
+   "start": 1445.853,
+   "end": 1448.05,
+   "samples": 22,
+   "matched": 22,
+   "kind": "speaker",
+   "crop": [
+    91,
+    59,
+    464
+   ],
+   "similarity": 0.799,
+   "face_px": 103,
+   "drift_px": 45,
+   "face_inside": true
+  }
+ ]
+}

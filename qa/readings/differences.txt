@@ -1,0 +1,121 @@
+
+=== clip1-ep28-proof-of-stake-incentives  2005.30 to 2053.73
+  small.en   agreement 97.0%, 3 differences
+      replace  text='incentivise'                                 small.en='incentivize'
+      replace  text='tech-savvy'                                  small.en='tech -savvy'
+      replace  text='masses.'                                     small.en='mass. Yeah.'
+  medium.en  agreement 95.1%, 8 differences
+      insert   text=''                                            medium.en='stake.'
+      delete   text='you know,'                                   medium.en=''
+      insert   text=''                                            medium.en='One'
+      replace  text='incentivise'                                 medium.en='incentivize'
+      delete   text='right?'                                      medium.en=''
+      replace  text='tech-savvy'                                  medium.en='tech -savvy'
+      delete   text='You know,'                                   medium.en=''
+      insert   text=''                                            medium.en='Yeah,'
+  large-v3   agreement 97.4%, 3 differences
+      replace  text='incentivise'                                 large-v3='incentivize'
+      replace  text='tech-savvy'                                  large-v3='tech -savvy'
+      replace  text='rationals'                                   large-v3='nationals'
+
+=== clip2-ep27-kyc-wallets  1318.85 to 1374.58
+  small.en   agreement 96.1%, 4 differences
+      delete   text='notes, you know, your'                       small.en=''
+      replace  text='could'                                       small.en='can'
+      replace  text='Redbelly'                                    small.en='Red Belly'
+      replace  text="KYC'd."                                      small.en='kowaseed.'
+  medium.en  agreement 92.6%, 8 differences
+      replace  text='Westpac, or'                                 medium.en='West Packard'
+      delete   text='right?'                                      medium.en=''
+      delete   text='notes, you know, your'                       medium.en=''
+      replace  text='$100,'                                       medium.en='100.'
+      replace  text='can'                                         medium.en='could'
+      insert   text=''                                            medium.en='you can have'
+      replace  text='Redbelly'                                    medium.en='Red Belly'
+      replace  text="KYC'd."                                      medium.en='coaxied.'
+  large-v3   agreement 90.1%, 14 differences
+      delete   text='So'                                          large-v3=''
+      insert   text=''                                            large-v3="here's"
+      insert   text=''                                            large-v3='state um'
+      insert   text=''                                            large-v3='in in'
+      replace  text='stablecoins'                                 large-v3='stable coins'
+      insert   text=''                                            large-v3='uh'
+      insert   text=''                                            large-v3='of'
+      replace  text='$50'                                         large-v3='fifty dollar'
+      replace  text='$100,'                                       large-v3='hundred that you can'
+      insert   text=''                                            large-v3='can have you'
+      insert   text=''                                            large-v3='as'
+      replace  text='Redbelly'                                    large-v3='red belly'
+      insert   text=''                                            large-v3='are'
+      replace  text="KYC'd."                                      large-v3='co -seed'
+
+=== clip3-ep27-tokenised-bonds  1409.45 to 1468.15
+  small.en   agreement 89.1%, 13 differences
+      replace  text='the'                                         small.en='a'
+      replace  text='talked'                                      small.en='talk'
+      insert   text=''                                            small.en='Um, was, was the,'
+      replace  text='Acacia,'                                     small.en='Arkesha,'
+      insert   text=''                                            small.en='Yeah. Yeah. Uh,'
+      insert   text=''                                            small.en='a, a, a'
+      insert   text=''                                            small.en='um, um, where we think'
+      insert   text=''                                            small.en='Uh,'
+      replace  text='Acacia,'                                     small.en='Arkesha,'
+      replace  text='rank'                                        small.en='ranks'
+      insert   text=''                                            small.en='Plus'
+      delete   text='you know,'                                   small.en=''
+      insert   text=''                                            small.en='Fantastic.'
+  medium.en  agreement 93.9%, 6 differences
+      replace  text='the'                                         medium.en='a'
+      replace  text='talked about. So,'                           medium.en='took out of it was'
+      insert   text=''                                            medium.en='a'
+      replace  text='cab'                                         medium.en='cap'
+      replace  text='rank'                                        medium.en='ranks'
+      insert   text=''                                            medium.en='Plus'
+  large-v3   agreement 95.4%, 8 differences
+      delete   text='Oh,'                                         large-v3=''
+      replace  text='So,'                                         large-v3='was'
+      insert   text=''                                            large-v3='No,'
+      insert   text=''                                            large-v3='Yeah, yeah.'
+      replace  text='cab'                                         large-v3='cap'
+      insert   text=''                                            large-v3='Plus'
+      delete   text='you know,'                                   large-v3=''
+      insert   text=''                                            large-v3='Fantastic.'
+
+=== clip4-ep26-registry-to-tokeniser  191.68 to 250.07
+  small.en   agreement 98.4%, 3 differences
+      insert   text=''                                            small.en='registry.'
+      replace  text='regulatory'                                  small.en='regularly'
+      replace  text='Liquidise,'                                  small.en='liquidize our'
+  medium.en  agreement 99.0%, 2 differences
+      replace  text='regulatory'                                  medium.en='regularly'
+      replace  text='Liquidise,'                                  medium.en='LiquidEyes,'
+  large-v3   agreement 97.7%, 5 differences
+      replace  text='Liquidise'                                   large-v3='Liquidize'
+      insert   text=''                                            large-v3='the'
+      insert   text=''                                            large-v3='uh'
+      replace  text='Liquidise,'                                  large-v3='uh liquidize or'
+      insert   text=''                                            large-v3='of'
+
+=== clip5-ep26-acacia-fund-test  1059.00 to 1118.85
+  small.en   agreement 98.7%, 3 differences
+      insert   text=''                                            small.en='Yes,'
+      replace  text='transactions.'                               small.en='transaction.'
+      insert   text=''                                            small.en='you'
+  medium.en  agreement 99.4%, 2 differences
+      insert   text=''                                            medium.en='Yes.'
+      insert   text=''                                            medium.en='Amazing.'
+  large-v3   agreement 99.7%, 1 differences
+      delete   text='So'                                          large-v3=''
+
+=== clip6-ep26-investor-portal  1393.72 to 1448.05
+  small.en   agreement 98.6%, 4 differences
+      delete   text='and'                                         small.en=''
+      delete   text='and'                                         small.en=''
+      insert   text=''                                            small.en="it's"
+      replace  text='getting'                                     small.en='get'
+  medium.en  agreement 100.0%, 0 differences
+  large-v3   agreement 98.6%, 4 differences
+      delete   text='And'                                         large-v3=''
+      replace  text='funds.'                                      large-v3='fund.'
+      insert   text=''                                            large-v3="it's"
+      delete   text='really'                                      large-v3=''
