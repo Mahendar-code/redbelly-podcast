@@ -1,7 +1,7 @@
 {
  "latest_on_ama": 29,
  "audit_model": "distil-large-v3",
- "live_page": "https://redbelly-podcast-clip-pack.vercel.app/",
+ "live_page": "https://redbelly-podcast.vercel.app/",
  "sources": {
   "rbi28": {
    "episode_no": 28,

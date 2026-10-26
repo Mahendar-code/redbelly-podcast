@@ -4,7 +4,7 @@ Styling follows the Redbelly DAO Task Board brand kit (taskboard.redbellydao.net
 slate surfaces, a single red accent, Be Vietnam Pro for words and JetBrains Mono for
 machine values. Dark by default, light on request. Static HTML, no build step.
 
-usage: page.py        (set SITE_URL to give the share card an absolute address)
+usage: page.py        (the share card URL comes from live_page in pack.json, or SITE_URL)
 """
 import html
 import json
@@ -317,7 +317,8 @@ def build(cfg, results):
     cuts = cfg["cuts"]
     episodes = ", ".join(str(n) for n in sorted({src[c["source"]]["episode_no"] for c in cuts}, reverse=True))
     runtime = sum(round(c["out"] - c["in"]) for c in cuts)
-    share = f"{SITE_URL}/assets/share-card.png" if SITE_URL else "assets/share-card.png"
+    base = SITE_URL or cfg.get("live_page", "").removesuffix("/")
+    share = f"{base}/assets/share-card.png" if base else "assets/share-card.png"
     blurb = ("Six subtitled vertical clips from recent Redbelly Insights episodes on Redbelly technology, "
              "Project Acacia and Tokeniser, each with its source time and a caption ready to post.")
     posts = "".join(post_card(n, c, src[c["source"]], results) for n, c in enumerate(cuts, 1))

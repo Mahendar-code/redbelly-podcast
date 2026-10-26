@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://redbelly-podcast-clip-pack.vercel.app/"><img src="assets/readme-banner.png" alt="Podcast Clip Pack: six subtitled vertical clips from Redbelly Insights" width="100%"></a>
+  <a href="https://redbelly-podcast.vercel.app/"><img src="assets/readme-banner.png" alt="Podcast Clip Pack: six subtitled vertical clips from Redbelly Insights" width="100%"></a>
 </p>
 
 <p align="center">
@@ -9,7 +9,7 @@
 
 <!-- badges:start -->
 <p align="center">
-  <a href="https://redbelly-podcast-clip-pack.vercel.app/"><img alt="Live review page" src="https://img.shields.io/badge/live_page-open-EF5350?style=for-the-badge&labelColor=141f26"></a>
+  <a href="https://redbelly-podcast.vercel.app/"><img alt="Live review page" src="https://img.shields.io/badge/live_page-open-EF5350?style=for-the-badge&labelColor=141f26"></a>
   <a href="QA.md"><img alt="Audit" src="https://img.shields.io/badge/audit-PASS-86EFAC?style=for-the-badge&labelColor=141f26"></a>
   <a href="SOURCES.md"><img alt="Clips" src="https://img.shields.io/badge/clips-6-f1f5f8?style=for-the-badge&labelColor=141f26"></a>
   <img alt="Format" src="https://img.shields.io/badge/format-1080x1920_9%3A16_30fps-f1f5f8?style=for-the-badge&labelColor=141f26">
@@ -19,7 +19,7 @@
 <!-- badges:end -->
 
 <p align="center">
-  <a href="https://redbelly-podcast-clip-pack.vercel.app/"><b>Review page</b></a>
+  <a href="https://redbelly-podcast.vercel.app/"><b>Review page</b></a>
   &nbsp;&nbsp;|&nbsp;&nbsp;
   <a href="SOURCES.md"><b>Sources and post captions</b></a>
   &nbsp;&nbsp;|&nbsp;&nbsp;
@@ -63,21 +63,21 @@ Click a still to play the clip on the review page. Times are from the official e
 <table>
 <tr>
 <td width="33%" valign="top">
-<a href="https://redbelly-podcast-clip-pack.vercel.app/#clip1-ep28-proof-of-stake-incentives"><img src="assets/stills/clip1-ep28-proof-of-stake-incentives.png" alt="Proof of stake still gets hacked. What's missing?" width="100%"></a>
+<a href="https://redbelly-podcast.vercel.app/#clip1-ep28-proof-of-stake-incentives"><img src="assets/stills/clip1-ep28-proof-of-stake-incentives.png" alt="Proof of stake still gets hacked. What's missing?" width="100%"></a>
 <br><sub><b>POST 1</b> &nbsp;/&nbsp; REDBELLY TECHNOLOGY</sub>
 <br><b>Proof of stake still gets hacked. What's missing?</b>
 <br><sub>Vincent Gramoli, Founder & Chief Science Officer, Redbelly Network</sub>
 <br><sub>Episode 28, 33:25.3 to 34:13.7, 48 s</sub>
 </td>
 <td width="33%" valign="top">
-<a href="https://redbelly-podcast-clip-pack.vercel.app/#clip2-ep27-kyc-wallets"><img src="assets/stills/clip2-ep27-kyc-wallets.png" alt="Stablecoins work like cash. Redbelly wallets are KYC'd." width="100%"></a>
+<a href="https://redbelly-podcast.vercel.app/#clip2-ep27-kyc-wallets"><img src="assets/stills/clip2-ep27-kyc-wallets.png" alt="Stablecoins work like cash. Redbelly wallets are KYC'd." width="100%"></a>
 <br><sub><b>POST 2</b> &nbsp;/&nbsp; REDBELLY TECHNOLOGY</sub>
 <br><b>Stablecoins work like cash. Redbelly wallets are KYC'd.</b>
 <br><sub>Drew Bradford, CEO, Macropod</sub>
 <br><sub>Episode 27, 21:58.8 to 22:54.6, 56 s</sub>
 </td>
 <td width="33%" valign="top">
-<a href="https://redbelly-podcast-clip-pack.vercel.app/#clip3-ep27-tokenised-bonds"><img src="assets/stills/clip3-ep27-tokenised-bonds.png" alt="After Project Acacia, tokenised bonds are next" width="100%"></a>
+<a href="https://redbelly-podcast.vercel.app/#clip3-ep27-tokenised-bonds"><img src="assets/stills/clip3-ep27-tokenised-bonds.png" alt="After Project Acacia, tokenised bonds are next" width="100%"></a>
 <br><sub><b>POST 3</b> &nbsp;/&nbsp; PROJECT ACACIA</sub>
 <br><b>After Project Acacia, tokenised bonds are next</b>
 <br><sub>Drew Bradford, CEO, Macropod</sub>
@@ -86,21 +86,21 @@ Click a still to play the clip on the review page. Times are from the official e
 </tr>
 <tr>
 <td width="33%" valign="top">
-<a href="https://redbelly-podcast-clip-pack.vercel.app/#clip4-ep26-registry-to-tokeniser"><img src="assets/stills/clip4-ep26-registry-to-tokeniser.png" alt="Every regulated asset needs a registry. Enter Tokeniser." width="100%"></a>
+<a href="https://redbelly-podcast.vercel.app/#clip4-ep26-registry-to-tokeniser"><img src="assets/stills/clip4-ep26-registry-to-tokeniser.png" alt="Every regulated asset needs a registry. Enter Tokeniser." width="100%"></a>
 <br><sub><b>POST 4</b> &nbsp;/&nbsp; TOKENISER</sub>
 <br><b>Every regulated asset needs a registry. Enter Tokeniser.</b>
 <br><sub>Alan Burt, Executive Chairman, Redbelly Network</sub>
 <br><sub>Episode 26, 03:11.7 to 04:10.1, 58 s</sub>
 </td>
 <td width="33%" valign="top">
-<a href="https://redbelly-podcast-clip-pack.vercel.app/#clip5-ep26-acacia-fund-test"><img src="assets/stills/clip5-ep26-acacia-fund-test.png" alt="What Project Acacia tested inside a real fund" width="100%"></a>
+<a href="https://redbelly-podcast.vercel.app/#clip5-ep26-acacia-fund-test"><img src="assets/stills/clip5-ep26-acacia-fund-test.png" alt="What Project Acacia tested inside a real fund" width="100%"></a>
 <br><sub><b>POST 5</b> &nbsp;/&nbsp; PROJECT ACACIA</sub>
 <br><b>What Project Acacia tested inside a real fund</b>
 <br><sub>Matt Mills, Chief Customer Officer, Tokeniser</sub>
 <br><sub>Episode 26, 17:39.0 to 18:38.8, 60 s</sub>
 </td>
 <td width="33%" valign="top">
-<a href="https://redbelly-podcast-clip-pack.vercel.app/#clip6-ep26-investor-portal"><img src="assets/stills/clip6-ep26-investor-portal.png" alt="What investors see when they log in to Tokeniser" width="100%"></a>
+<a href="https://redbelly-podcast.vercel.app/#clip6-ep26-investor-portal"><img src="assets/stills/clip6-ep26-investor-portal.png" alt="What investors see when they log in to Tokeniser" width="100%"></a>
 <br><sub><b>POST 6</b> &nbsp;/&nbsp; TOKENISER</sub>
 <br><b>What investors see when they log in to Tokeniser</b>
 <br><sub>Matt Mills, Chief Customer Officer, Tokeniser</sub>
