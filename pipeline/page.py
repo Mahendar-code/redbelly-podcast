@@ -333,14 +333,14 @@ def build(cfg, results):
 <html lang="en-AU" data-theme="dark">
 <head>
 <meta charset="utf-8">
-<title>Podcast Clip Pack</title>
+<title>Redbelly Podcast</title>
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="description" content="{h(blurb)}">
 <link rel="icon" type="image/png" sizes="192x192" href="assets/dao-kit/favicon.png">
 <link rel="icon" type="image/svg+xml" href="assets/dao-kit/favicon.svg">
 <link rel="apple-touch-icon" href="assets/dao-kit/favicon.png">
 <meta content="website" property="og:type">
-<meta property="og:title" content="Podcast Clip Pack">
+<meta property="og:title" content="Redbelly Podcast">
 <meta property="og:description" content="{h(blurb)}">
 <meta property="og:image" content="{h(share)}">
 <meta content="summary_large_image" name="twitter:card">
