@@ -273,7 +273,9 @@ def build(cfg, results):
 <title>Podcast Clip Pack</title>
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="description" content="{h(blurb)}">
-<link rel="icon" type="image/png" sizes="512x512" href="assets/dao-kit/icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/dao-kit/favicon.png">
+<link rel="icon" type="image/svg+xml" href="assets/dao-kit/favicon.svg">
+<link rel="apple-touch-icon" href="assets/dao-kit/favicon.png">
 <meta content="website" property="og:type">
 <meta property="og:title" content="Podcast Clip Pack">
 <meta property="og:description" content="{h(blurb)}">

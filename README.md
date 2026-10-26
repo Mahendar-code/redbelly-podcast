@@ -18,7 +18,7 @@ The review page is `index.html`, published on Vercel. It plays every clip, says 
 | Working data | `data/timing/`, `data/framing/` | Word timings for the subtitles, and the crop window chosen for each camera shot |
 | Code | `pipeline/` | Everything that cut, framed, subtitled, rendered and audited the clips |
 | Tests | `tests/` | `pytest` suite for the committed pack and the pipeline code |
-| Look | `assets/` | DAO brand kit logos and icon, fonts with their SIL OFL licences, one still per clip, the share card |
+| Look | `assets/` | DAO brand kit logos, a transparent favicon cut from the kit's mark (SVG that follows the browser's light or dark mode, plus a PNG), fonts with their SIL OFL licences, one still per clip, the share card |
 
 ## The six posts
 
