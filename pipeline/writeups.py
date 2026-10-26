@@ -1,4 +1,5 @@
-"""Write SOURCES.md (deliverable 2) and QA.md from pack.json and qa/results.json.
+"""Write SOURCES.md (deliverable 2), QA.md and the generated README sections
+from pack.json and qa/results.json.
 
 usage: writeups.py
 """
@@ -136,14 +137,94 @@ def qa_md(cfg, results):
     return "\n".join(lines)
 
 
+def fill(text, name, body):
+    """Replace what sits between <!-- name:start --> and <!-- name:end --> in a Markdown file."""
+    head, rest = text.split(f"<!-- {name}:start -->", 1)
+    _, tail = rest.split(f"<!-- {name}:end -->", 1)
+    return f"{head}<!-- {name}:start -->\n{body}\n<!-- {name}:end -->{tail}"
+
+
+def readme_posts(cfg):
+    """Two rows of three stills, each linking to the clip on the review page."""
+    src, live = cfg["sources"], cfg["live_page"]
+    cells = []
+    for n, c in enumerate(cfg["cuts"], 1):
+        s = src[c["source"]]
+        cells.append(
+            f'<td width="33%" valign="top">\n'
+            f'<a href="{live}#{c["slug"]}"><img src="assets/stills/{c["slug"]}.png" alt="{c["headline"]}" width="100%"></a>\n'
+            f'<br><sub><b>POST {n}</b> &nbsp;/&nbsp; {c["theme"].upper()}</sub>\n'
+            f'<br><b>{c["headline"]}</b>\n'
+            f'<br><sub>{c["person"]}, {c["person_title"]}</sub>\n'
+            f'<br><sub>Episode {s["episode_no"]}, {clock(c["in"])} to {clock(c["out"])}, {seconds(c)} s</sub>\n'
+            f'</td>')
+    rows = ["<tr>\n" + "\n".join(cells[k:k + 3]) + "\n</tr>" for k in (0, 3)]
+    return "<table>\n" + "\n".join(rows) + "\n</table>"
+
+
+def readme_quality(cfg, results):
+    lines = ["| Post | File | Loudness | Matches source | Subtitles vs audio | Speaker on screen |",
+             "|:-:|---|---|---|---|---|"]
+    by_slug = {r["slug"]: r for r in results["per_clip"]}
+    for n, c in enumerate(cfg["cuts"], 1):
+        r = by_slug[c["slug"]]
+        p, L, ch = r["probe"], r["loudness"], r["checks"]
+        pick = lambda prefix: next(v["value"] for k, v in ch.items() if k.startswith(prefix))  # noqa: E731
+        offset_ms = float(pick("audio matches stated source").split(",")[0].split()[1]) * 1000
+        seen, sampled = pick("speaker in frame").split()[0].split("/")
+        lines.append(f"| {n} | {p['width']}x{p['height']}, {p['fps']:g} fps, {p['duration']:.1f} s | "
+                     f"{L['lufs']:.1f} LUFS, {L['true_peak']:.1f} dBTP | {offset_ms:+.0f} ms | "
+                     f"{pick('subtitles vs independent').split(' (raw')[0]} | "
+                     f"{int(seen) / int(sampled):.0%} ({seen} of {sampled} frames) |")
+    spread = results["pack_checks"]["loudness spread"]["value"].split(" (")[0]
+    passed = sum(v["pass"] for r in results["per_clip"] for v in r["checks"].values())
+    total = sum(len(r["checks"]) for r in results["per_clip"])
+    lines += ["", f"**{results['result']}**: {passed} of {total} clip checks and "
+              f"{sum(v['pass'] for v in results['pack_checks'].values())} of {len(results['pack_checks'])} pack checks "
+              f"pass. Loudness spread across the pack: {spread}. Full readings in [`QA.md`](QA.md)."]
+    return "\n".join(lines)
+
+
+def readme_badges(cfg, results):
+    verdict = results.get("result", "not run")
+    colour = "86EFAC" if verdict == "PASS" else "FCD34D"
+    live = cfg["live_page"]
+    badge = lambda label, value, col: (f"https://img.shields.io/badge/{label}-{value}-{col}"  # noqa: E731
+                                       "?style=for-the-badge&labelColor=141f26")
+    items = [
+        (live, "Live review page", badge("live_page", "open", "EF5350")),
+        ("QA.md", "Audit", badge("audit", verdict, colour)),
+        ("SOURCES.md", "Clips", badge("clips", len(cfg["cuts"]), "f1f5f8")),
+        (None, "Format", badge("format", "1080x1920_9%3A16_30fps", "f1f5f8")),
+        (None, "Loudness", badge("loudness", "--14_LUFS", "f1f5f8")),
+        ("tests/test_deliverables.py", "Tests", badge("pytest", "passing", "86EFAC")),
+    ]
+    out = ['<p align="center">']
+    for href, alt, src in items:
+        img = f'<img alt="{alt}" src="{src}">'
+        out.append(f'  <a href="{href}">{img}</a>' if href else f"  {img}")
+    return "\n".join(out + ["</p>"])
+
+
+def write_readme(cfg, results):
+    path = ROOT / "README.md"
+    text = path.read_text(encoding="utf-8")
+    text = fill(text, "badges", readme_badges(cfg, results))
+    text = fill(text, "posts", readme_posts(cfg))
+    if results:
+        text = fill(text, "quality", readme_quality(cfg, results))
+    path.write_text(text, encoding="utf-8")
+
+
 def main():
     cfg = json.loads((ROOT / "pack.json").read_text())
     (ROOT / "SOURCES.md").write_text(sources_md(cfg) + "\n", encoding="utf-8")
     results_path = ROOT / "qa" / "results.json"
-    if results_path.exists():
-        results = json.loads(results_path.read_text())
+    results = json.loads(results_path.read_text()) if results_path.exists() else {}
+    if results:
         (ROOT / "QA.md").write_text(qa_md(cfg, results) + "\n", encoding="utf-8")
-    print("wrote SOURCES.md" + (" and QA.md" if results_path.exists() else ""))
+    write_readme(cfg, results)
+    print("wrote SOURCES.md, README.md sections" + (" and QA.md" if results else ""))
 
 
 if __name__ == "__main__":

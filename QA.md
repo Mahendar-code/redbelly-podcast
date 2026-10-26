@@ -11,7 +11,7 @@ Outcome: **PASS**, from a full audit with 0 failed checks.
 | clip1-ep28-proof-of-stake-incentives | 1080x1920 | 30 fps | h264 + aac | 48.4 s | 18.4 MB | -14.4 LUFS | -2.2 dBTP | 2.6 LU |
 | clip2-ep27-kyc-wallets | 1080x1920 | 30 fps | h264 + aac | 55.7 s | 20.8 MB | -14.6 LUFS | -2.2 dBTP | 3.7 LU |
 | clip3-ep27-tokenised-bonds | 1080x1920 | 30 fps | h264 + aac | 58.7 s | 19.1 MB | -14.6 LUFS | -2.1 dBTP | 4.2 LU |
-| clip4-ep26-registry-to-tokeniser | 1080x1920 | 30 fps | h264 + aac | 58.4 s | 25.0 MB | -14.6 LUFS | -2.3 dBTP | 2.5 LU |
+| clip4-ep26-registry-to-tokeniser | 1080x1920 | 30 fps | h264 + aac | 58.4 s | 24.7 MB | -14.6 LUFS | -2.3 dBTP | 2.5 LU |
 | clip5-ep26-acacia-fund-test | 1080x1920 | 30 fps | h264 + aac | 59.9 s | 18.1 MB | -14.7 LUFS | -2.2 dBTP | 2.9 LU |
 | clip6-ep26-investor-portal | 1080x1920 | 30 fps | h264 + aac | 54.3 s | 16.5 MB | -14.9 LUFS | -2.1 dBTP | 3.3 LU |
 

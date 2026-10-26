@@ -1,6 +1,7 @@
 {
  "latest_on_ama": 29,
  "audit_model": "distil-large-v3",
+ "live_page": "https://redbelly-podcast-clip-pack.vercel.app/",
  "sources": {
   "rbi28": {
    "episode_no": 28,
@@ -8,6 +9,9 @@
    "aired": "11 June 2026",
    "page": "https://redbelly.network/ama",
    "video": "https://storage.googleapis.com/redbelly-website.firebasestorage.app/Video/rb_ep_28_final_745719acdb/rb_ep_28_final_745719acdb.mp4",
+   "host_ref_times": [
+    1800
+   ],
    "people": {
     "Vincent Gramoli": {
      "ref_times": [
@@ -23,6 +27,10 @@
    "aired": "28 May 2026",
    "page": "https://redbelly.network/ama",
    "video": "https://storage.googleapis.com/redbelly-website.firebasestorage.app/Video/rb_ep_27_final_c2ee7f4a7d/rb_ep_27_final_c2ee7f4a7d.mp4",
+   "host_ref_times": [
+    1314,
+    1404.5
+   ],
    "people": {
     "Drew Bradford": {
      "ref_times": [
@@ -39,6 +47,11 @@
    "aired": "26 March 2026",
    "page": "https://redbelly.network/ama",
    "video": "https://firebasestorage.googleapis.com/v0/b/redbelly-website.firebasestorage.app/o/RBI_EP26.mp4?alt=media",
+   "host_ref_times": [
+    189.5,
+    1055,
+    2325.5
+   ],
    "people": {
     "Alan Burt": {
      "ref_times": [
@@ -176,6 +189,7 @@
    "post_copy": "Who holds what? In regulated markets, everything starts with the registry. Redbelly Executive Chairman Alan Burt on why Redbelly acquired Liquidise and relaunched it as Tokeniser.",
    "transcript": "Yeah, so obviously at Redbelly, we've been always focused on how we bring financial services on chain. And Liquidise has always been a great partner of Redbelly, and they've been focused specifically at the time on private equities. We saw the opportunity at Redbelly to broaden that, and obviously focused on other alternate assets. But the key to everything is the registry. So who holds what? In a regulated environment, the bearer instrument is, other than cash, pretty much illegal now across every jurisdiction. So there is always regulatory required a registry. And so we've been working with Matt and saw the opportunity with some of our other partners to greatly accelerate that adoption by helping them with already having a tokenised registry. So as Matt said, we've acquired Liquidise, the registry business and their customers, and we've now rebranded that into Tokeniser, which is much more focused on a full cradle to grave, if you like, on asset origination, asset servicing and obviously registry, and then what everyone wants to hear about, the secondary trading opportunities that will be unlocked. But we've got to start with, let's get the assets on.",
    "editor_notes": [
+    "For the first 1.6 seconds the episode is still on the host while Alan Burt starts to answer, so his first frame on camera is held until the episode cuts to him. The audio is unchanged.",
     "Subtitle decision at 27 s: the three transcription models split between \"regularly\" and \"regulatory\" required. The subtitle follows large-v3 and the sense of the sentence, which is about what regulation requires."
    ]
   },

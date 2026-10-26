@@ -11,17 +11,8 @@
    "start": 191.68,
    "end": 193.247,
    "samples": 16,
-   "matched": 16,
-   "kind": "speaker",
-   "crop": [
-    422,
-    44,
-    520
-   ],
-   "similarity": 0.555,
-   "face_px": 116,
-   "drift_px": 8,
-   "face_inside": true
+   "matched": 0,
+   "kind": "cutaway"
   },
   {
    "start": 193.247,

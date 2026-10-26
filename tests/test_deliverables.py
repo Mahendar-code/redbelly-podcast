@@ -129,6 +129,14 @@ def test_sources_md_gives_time_and_caption_for_each_cut():
         assert cut["post_copy"] in text and f"clips/{cut['slug']}.mp4" in text
 
 
+def test_readme_shows_every_post_and_the_audit_result():
+    text = (ROOT / "README.md").read_text()
+    for cut in CUTS:
+        assert f"assets/stills/{cut['slug']}.png" in text and f"{PACK['live_page']}#{cut['slug']}" in text
+    verdict = json.loads((ROOT / "qa" / "results.json").read_text())["result"]
+    assert f"badge/audit-{verdict}-" in text
+
+
 def test_page_offers_every_clip_and_srt():
     text = (ROOT / "index.html").read_text()
     assert all(f"clips/{c['slug']}.mp4" in text and f"subtitles/{c['slug']}.srt" in text for c in CUTS)

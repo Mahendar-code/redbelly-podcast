@@ -91,6 +91,8 @@ Video `clips/clip4-ep26-registry-to-tokeniser.mp4`, with the same subtitles as a
 | What it says | Every regulated asset needs a registry of who holds what, so Redbelly acquired the Liquidise registry business and rebranded it Tokeniser, covering origination, servicing and the registry before secondary trading. |
 | Post caption | Who holds what? In regulated markets, everything starts with the registry. Redbelly Executive Chairman Alan Burt on why Redbelly acquired Liquidise and relaunched it as Tokeniser. |
 
+Editor's note: For the first 1.6 seconds the episode is still on the host while Alan Burt starts to answer, so his first frame on camera is held until the episode cuts to him. The audio is unchanged.
+
 Editor's note: Subtitle decision at 27 s: the three transcription models split between "regularly" and "regulatory" required. The subtitle follows large-v3 and the sense of the sentence, which is about what regulation requires.
 
 What the subtitles say:

@@ -184,23 +184,24 @@ def retranscribe(clip_mp4, model_name):
     return " ".join(s.text.strip() for s in segs)
 
 
-def speaker_in_frame(clip_mp4, src, speaker):
-    """Share of sampled output frames whose window shows a face matching the speaker."""
+def speaker_in_frame(clip_mp4, src, meta, person):
+    """Share of sampled output frames whose window shows the speaker: a face that matches the
+    speaker's reference and matches them better than the host or any co-guest."""
     faces = framing.Faces()
+    speaker = meta["people"][person]
     ref = framing.reference(src, speaker["ref_times"], faces, speaker.get("ref_area") or speaker.get("crop_area"))
+    rivals = framing.rival_refs(src, meta, person, faces)
     total = hit = 0
     worst = 1.0
     for i, (_, img) in enumerate(framing.frames(clip_mp4, 0, 999, 1080)):
         if i % 6:
             continue                                      # 5 samples per second
         win = np.ascontiguousarray(img[VIDEO_Y:VIDEO_Y + VIDEO_S])
-        found = faces.detect(win)
-        sims = [float(np.dot(faces.embed(win, f).ravel(), ref.ravel())) for f in found]
-        best = max(sims, default=0.0)
+        scores = [framing.identify(faces, win, f, ref, rivals) for f in faces.detect(win)]
         total += 1
-        if best >= framing.MATCH:
+        if any(framing.is_speaker(sim, rival) for sim, rival in scores):
             hit += 1
-        worst = min(worst, best)
+        worst = min(worst, max((sim for sim, _ in scores), default=0.0))
     return hit, total, round(worst, 3)
 
 
@@ -284,7 +285,7 @@ def main():
             r["independent_differences"] = diffs
             check(f"subtitles vs independent transcript ({cfg['audit_model']})", e <= 0.10,
                   f"WER {e:.1%} (raw {wer(c['transcript'], heard):.1%})")
-            hit, total, worst = speaker_in_frame(mp4, src, meta["people"][c["person"]])
+            hit, total, worst = speaker_in_frame(mp4, src, meta, c["person"])
             check("speaker in frame (face recognition)", hit / total >= 0.97,
                   f"{hit}/{total} sampled frames ({hit / total:.0%})")
 

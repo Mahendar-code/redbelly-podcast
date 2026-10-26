@@ -29,6 +29,7 @@ FPS = 30
 FACE_EVERY = 3            # run face detection on every 3rd frame (10 per second)
 SHOT_THRESHOLD = 0.45     # histogram distance that counts as a camera cut
 MATCH = 0.40              # SFace cosine similarity that counts as the same person
+MARGIN = 0.05             # and it must beat every other known face (host, co-guest) by this much
 MIN_SHOT = 0.25           # shorter "shots" are merged into the previous one (flashes, dissolves)
 FACE_SPAN = 4.5           # crop window width in face widths
 
@@ -105,14 +106,34 @@ def hist(img):
     return cv2.normalize(h, h).flatten()
 
 
-def analyse(src, start, end, ref_times, region=None):
+def rival_refs(src, meta, person, faces):
+    """Embeddings of everyone else who appears in the episode: the host and any co-guest."""
+    rivals = [reference(src, meta["host_ref_times"], faces)] if meta.get("host_ref_times") else []
+    for name, other in meta["people"].items():
+        if name != person:
+            rivals.append(reference(src, other["ref_times"], faces, other.get("ref_area") or other.get("crop_area")))
+    return rivals
+
+
+def identify(faces, img, face, ref, rivals):
+    """Similarity to the speaker, and to the closest of the other known people."""
+    feat = faces.embed(img, face).ravel()
+    rival = max((float(np.dot(feat, r.ravel())) for r in rivals), default=0.0)
+    return float(np.dot(feat, ref.ravel())), rival
+
+
+def is_speaker(sim, rival):
+    return sim >= MATCH and sim >= rival + MARGIN
+
+
+def analyse(src, start, end, ref_times, region=None, rivals=()):
     faces = Faces()
     ref = reference(src, ref_times, faces, region)
     src_w, src_h = probe(src)
     scale = src_w / ANALYSIS_W
 
     cuts = [start]
-    samples = []          # (t, [(sim, cx, cy, fw, fh), ...]) in source pixels
+    samples = []          # (t, [(sim, cx, cy, fw, fh, rival_sim), ...]) in source pixels
     prev = None
     for i, (t, img) in enumerate(frames(src, start, end, ANALYSIS_W)):
         hs = hist(img)
@@ -123,9 +144,9 @@ def analyse(src, start, end, ref_times, region=None):
         if i % FACE_EVERY == 0:
             found = []
             for f in faces.detect(img):
-                sim = float(np.dot(faces.embed(img, f).ravel(), ref.ravel()))
+                sim, rival = identify(faces, img, f, ref, rivals)
                 x, y, w, h = (float(v) * scale for v in f[:4])
-                found.append((sim, x + w / 2, y + h / 2, w, h))
+                found.append((sim, x + w / 2, y + h / 2, w, h, rival))
             samples.append((t, found))
     cuts.append(end)
     return cuts, samples, (src_w, src_h)
@@ -140,9 +161,9 @@ def plan(cuts, samples, size, region=None, side=None):
         inside = [s for s in samples if a <= s[0] < b]
         hits = []
         for _, found in inside:
-            best = max(found, key=lambda f: f[0], default=None)
-            if best and best[0] >= MATCH and rx0 <= best[1] < rx1:
-                hits.append(best)
+            ours = [f for f in found if is_speaker(f[0], f[5]) and rx0 <= f[1] < rx1]
+            if ours:
+                hits.append(max(ours, key=lambda f: f[0]))
         shot = {"start": round(a, 3), "end": round(b, 3), "samples": len(inside), "matched": len(hits)}
         if not inside or len(hits) < max(1, 0.5 * len(inside)):
             shot["kind"] = "cutaway"
@@ -171,7 +192,9 @@ def track_clip(clip, episode):
     src = WORK / "src" / f"{clip['source']}.mp4"
     spk = episode["people"][clip["person"]]
     region = spk.get("crop_area")
-    cuts, samples, size = analyse(src, clip["in"], clip["out"], spk["ref_times"], spk.get("ref_area") or region)
+    rivals = rival_refs(src, episode, clip["person"], Faces())
+    cuts, samples, size = analyse(src, clip["in"], clip["out"], spk["ref_times"], spk.get("ref_area") or region,
+                                  rivals)
     shots = plan(cuts, samples, size, region, spk.get("window"))
     out = ROOT / "data" / "framing" / f"{clip['slug']}.json"
     out.parent.mkdir(parents=True, exist_ok=True)

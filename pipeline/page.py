@@ -17,6 +17,7 @@ from PIL import Image, ImageDraw, ImageFont
 ROOT = Path(__file__).resolve().parent.parent
 STILLS = ROOT / "assets" / "stills"
 SHARE_CARD = ROOT / "assets" / "share-card.png"
+BANNER = ROOT / "assets" / "readme-banner.png"
 SITE_URL = (os.environ.get("SITE_URL") or "").removesuffix("/")
 
 
@@ -59,6 +60,50 @@ def make_share_card(cuts):
         card.paste(still, (left + k * (width + gap), 630 - 24 - height))
     draw.rectangle((0, 0, 1200, 5), fill=(239, 83, 80))
     card.save(SHARE_CARD, optimize=True)
+
+
+def make_banner(cuts, results):
+    """1600x680 banner for the top of the GitHub README: title block left, the six stills right."""
+    W, H = 1600, 680
+    card = Image.new("RGB", (W, H), (12, 19, 23))
+    draw = ImageDraw.Draw(card)
+    fonts = ROOT / "assets" / "fonts"
+    bold = lambda size: ImageFont.truetype(str(fonts / "BeVietnamPro-Bold.ttf"), size)  # noqa: E731
+    regular = ImageFont.truetype(str(fonts / "BeVietnamPro-Regular.ttf"), 26)
+    mono = ImageFont.truetype(str(fonts / "JetBrainsMono.ttf"), 21)
+    mono.set_variation_by_name("Medium")
+    draw.rectangle((0, 0, W, 6), fill=(239, 83, 80))
+
+    # right: 3 x 2 grid of stills on a slightly raised panel
+    tw, gap = 170, 14
+    th = round(tw * 16 / 9)
+    gx, gy = W - 64 - (3 * tw + 2 * gap), (H - (2 * th + gap)) // 2
+    draw.rounded_rectangle((gx - 18, gy - 18, gx + 3 * tw + 2 * gap + 18, gy + 2 * th + gap + 18), radius=8,
+                           fill=(20, 31, 38), outline=(38, 54, 65))
+    for k, c in enumerate(cuts[:6]):
+        still = Image.open(STILLS / f"{c['slug']}.png").resize((tw, th), Image.LANCZOS)
+        card.paste(still, (gx + (k % 3) * (tw + gap), gy + (k // 3) * (th + gap)))
+
+    # left: label, logo, title, line, facts
+    x = 72
+    logo = Image.open(ROOT / "assets" / "dao-kit" / "dao-logo-on-dark.png").convert("RGBA")
+    logo = logo.resize((round(logo.width * 96 / logo.height), 96), Image.LANCZOS)
+    card.paste(logo, (x - 6, 64), logo)
+    draw.ellipse((x, 205, x + 12, 217), fill=(239, 83, 80))
+    draw.text((x + 24, 198), "REDBELLY INSIGHTS", font=mono, fill=(194, 206, 214))
+    draw.text((x, 236), "Podcast", font=bold(84), fill=(241, 245, 248))
+    draw.text((x, 330), "Clip Pack", font=bold(84), fill=(241, 245, 248))
+    draw.text((x, 446), "Six subtitled vertical clips on Redbelly", font=regular, fill=(194, 206, 214))
+    draw.text((x, 482), "technology, Project Acacia and Tokeniser.", font=regular, fill=(194, 206, 214))
+    verdict = results.get("result", "")
+    facts = ["1080x1920", "30 FPS", "-14 LUFS"] + (["AUDIT " + verdict] if verdict else [])
+    fx = x
+    for fact in facts:
+        w = draw.textlength(fact, font=mono)
+        draw.rounded_rectangle((fx, 560, fx + w + 28, 602), radius=4, outline=(52, 68, 79), fill=(20, 31, 38))
+        draw.text((fx + 14, 569), fact, font=mono, fill=(255, 179, 174) if fact.startswith("AUDIT") else (241, 245, 248))
+        fx += w + 40
+    card.save(BANNER, optimize=True)
 
 
 def audit_row(results, slug):
@@ -161,7 +206,19 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var
 .bar{position:sticky;top:0;z-index:5;background:var(--panel);border-bottom:1px solid var(--rule)}
 .bar .shell{display:flex;align-items:center;gap:16px;min-height:64px}
 .bar img{height:40px;width:auto}
-.bar .where{font-family:var(--mono);font-size:12px;letter-spacing:.1em;color:var(--ink-3);margin-right:auto}
+.bar .where{display:flex;gap:22px;margin:0 auto 0 12px;font:500 12px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase}
+.bar .where a{color:var(--ink-2);text-decoration:none;padding:8px 0;border-bottom:2px solid transparent}
+.bar .where a:hover{color:var(--ink);border-bottom-color:var(--red)}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin:26px 0 0!important}
+.ghostlight{display:inline-flex;align-items:center;min-height:40px;padding:8px 14px;border-radius:4px;border:1px solid #34444f;color:#f1f5f8;font:600 15px/1.2 var(--sans);text-decoration:none}
+.ghostlight:hover{border-color:var(--red)}
+.strip{background:var(--panel);border-bottom:1px solid var(--rule)}
+.strip ol{list-style:none;margin:0;padding:18px 0;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:12px}
+.strip a{display:grid;grid-template-columns:52px minmax(0,1fr);gap:10px;align-items:center;text-decoration:none;color:var(--ink);padding:6px;border-radius:4px;border:1px solid transparent}
+.strip a:hover{border-color:var(--rule);background:var(--panel-2)}
+.strip img{width:52px;height:auto;aspect-ratio:9/16;border-radius:2px;display:block}
+.strip small{display:block;font:500 11px/1.2 var(--mono);letter-spacing:.08em;color:var(--accent-ink)}
+.strip span{display:block;font-size:13px;line-height:1.3;margin-top:3px}
 .dark-only{display:block}.light-only{display:none}
 :root[data-theme="light"] .dark-only{display:none}:root[data-theme="light"] .light-only{display:block}
 .lead{background:#1d3140;color:#f1f5f8;border-bottom:1px solid var(--rule)}
@@ -227,7 +284,8 @@ summary{cursor:pointer;font-weight:600}
 .cards p{margin:0 0 10px;color:var(--ink-2)}.cards p:last-child{margin:0}
 .end{padding:28px 0 44px;color:var(--ink-3);font-size:14px}
 code{font-family:var(--mono);font-size:.92em}
-@media (max-width:520px){.bar .where{display:none}.bar .icon{margin-left:auto}}
+@media (max-width:1060px){.strip ol{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:820px){.bar .where{display:none}.bar .icon{margin-left:auto}.strip ol{display:flex;overflow-x:auto;scroll-snap-type:x mandatory}.strip li{flex:0 0 200px;scroll-snap-align:start}}
 @media (max-width:820px){.lead .shell{grid-template-columns:1fr}.post{grid-template-columns:1fr}.frame{max-width:340px}
 .inpack li{grid-template-columns:36px minmax(0,1fr)}.inpack li a{grid-column:2}}
 """
@@ -263,6 +321,10 @@ def build(cfg, results):
     blurb = ("Six subtitled vertical clips from recent Redbelly Insights episodes on Redbelly technology, "
              "Project Acacia and Tokeniser, each with its source time and a caption ready to post.")
     posts = "".join(post_card(n, c, src[c["source"]], results) for n, c in enumerate(cuts, 1))
+    strip = "".join(
+        f'<li><a href="#{h(c["slug"])}"><img src="assets/stills/{h(c["slug"])}.png" alt="" width="52" height="92" '
+        f'loading="lazy"><div><small>POST {n}</small><span>{h(c["headline"])}</span></div></a></li>'
+        for n, c in enumerate(cuts, 1))
     making = "".join(
         f'<article><h3>{h(m["title"])}</h3>{"".join(f"<p>{h(para)}</p>" for para in m["body"])}</article>'
         for m in cfg["making_of"])
@@ -287,7 +349,7 @@ def build(cfg, results):
 <header class="bar"><div class="shell">
   <img class="dark-only" src="assets/dao-kit/dao-logo-on-dark.png" alt="Redbelly DAO" width="56" height="40">
   <img class="light-only" src="assets/dao-kit/dao-logo-on-light.png" alt="Redbelly DAO" width="56" height="40">
-  <span class="where">CLIP PACK  /  6 POSTS</span>
+  <nav class="where" aria-label="Sections"><a href="#posts">Posts</a><a href="#qa">QA</a><a href="#making-of">Making of</a><a href="SOURCES.md">Sources</a></nav>
   <button type="button" class="quiet icon" data-theme-switch aria-pressed="false" aria-label="Switch to light theme" title="Switch to light theme"><svg class="sun" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><svg class="moon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></button>
 </div></header>
 <main>
@@ -295,6 +357,7 @@ def build(cfg, results):
   <div>
     <h1>Podcast Clip Pack</h1>
     <p>The strongest short moments from the latest Redbelly Insights episodes, cut to stand on their own. Every clip is vertical, subtitled, opens on a headline with the speaker's name and title, and makes one point about Redbelly technology, Project Acacia or Tokeniser. Made for the Redbelly and DAO accounts on X, YouTube Shorts and Instagram as the show relaunches as Off Paper - Powered by Tokeniser.</p>
+    <p class="actions"><a class="solid" href="#posts">Play the six posts</a><a class="ghostlight" href="SOURCES.md">Source list and captions</a></p>
   </div>
   <ul class="chips">
     <li><b>6</b><span>clips from episodes {h(episodes)}</span></li>
@@ -303,6 +366,8 @@ def build(cfg, results):
     <li><b>-14 LUFS</b><span>same level on every clip</span></li>
   </ul>
 </div></section>
+
+<nav class="strip" aria-label="Jump to a post"><div class="shell"><ol>{strip}</ol></div></nav>
 
 <section class="part"><div class="shell">
   <h2>In this pack</h2>
@@ -348,8 +413,9 @@ def main():
     for c in cfg["cuts"]:
         make_still(c["slug"])
     make_share_card(cfg["cuts"])
+    make_banner(cfg["cuts"], results)
     (ROOT / "index.html").write_text(build(cfg, results), encoding="utf-8")
-    print("wrote index.html, assets/share-card.png and", len(cfg["cuts"]), "stills")
+    print("wrote index.html, assets/share-card.png, assets/readme-banner.png and", len(cfg["cuts"]), "stills")
 
 
 if __name__ == "__main__":
